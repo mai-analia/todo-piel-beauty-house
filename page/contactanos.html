@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- LENGUAJE -->
+<head> <!-- COMIENZO DE HEAD -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- COMPATIBILIDAD CON NAVEGADOR EDGE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../resources/favicon.ico" type="image/x=icon"> <!-- ICONO DE LAS PAGINAS -->
+    <!-- LETRAS DE GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stoke&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css"><!--LINK CSS -->
+    <title> Contactanos </title>  <!-- TITULO -->
+</head><!-- FIN DE HEAD -->
+<body> <!-- INICIO DE CUERPO DE PAGINA -->
+    <header class="header"> 
+        <h1 class="header__nombre-pag"> TODO PIEL BEAUTY HOUSE </h1>
+        <nav class="header__nav">
+            <img class="header__logo" src="../resources/favicon.ico" alt=""> <!-- LOGO EN EL MENU-->
+            <ul class="header__lista"> <!-- BARRA DE MENU -->
+                <li class="header__pages"> <a href="../index.html"> Inicio</a></li>
+                <li class="header__pages"> <a href="quienes-somos.html"> Quienes somos</a></li>
+                <li class="header__pages"> <a href="servicios.html"> Servicios </a></li>
+                <li class="header__pages"> <a href="promos-y-spa.html"> Promos y SPA</a></li>
+                <li class="header__pages"> <a href="#"> Contactanos </a></li>
+            </ul> 
+        </nav>
+    </header>
+  <main> <!-- INICIO DE MAIN -->
+        <h1> Contactanos </h1>
+         <form method="post"> <!-- INICIO FORMULARIO -->
+            <section class="form">  <!-- SECCION FORMULARIO  -->
+                <article class="form__nombre"> <!--INSERTAR NOMBRE--> 
+                    <label for="nombre">Nombre</label>
+                    <input name="nombre">
+                </article>
+                <article class="form__email"> <!--INSERTAR EMAIL--> 
+                    <label for="email">E-mail</label>
+                    <input name="email">
+                </article>
+                <article class="form__textarea"> <!--INSERTAR COEMNTARIO--> 
+                    <label for="dejatucomentario">Deja tu comentario</label>
+                    <textarea> </textarea> <!-- informacion que amerite mas de una linea NUNCA INFORMACION SENSIBLE -->
+                </article>
+            <input class="form__botones" type="submit"> <!-- enviar formulario --> 
+            <input class="form__botones" type="reset"> <!-- limpiar formulario -->
+            </section>
+         </form> <!-- CIERRE DE FORMULARIO -->
+            <section class="maps"> <!-- seccion maps -->
+                <article class="maps__link">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26256.257909088316!2d-58.5581494!3d-34.65388875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7d93bab75a3%3A0xaafe140bc9dea3db!2sRamos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1655430781194!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </article>
+                <article class="maps__imagenlogo">
+                    <img  src="../resources/logo mai.jpeg">
+                </article>
+            </section>
+  </main><!-- FIN DE MAIN -->
+<footer> <!-- PIE DE PAGINA -->
+    <div class="footer__redes">
+        <p class="footer__seguinos"> Seguinos en nuestras redes sociales: </p> 
+        <img class ="footer__imagen" src="resources/logos.jpg" alt="logo de redes sociales"> <!-- IMAGEN REDES SOCIALES -->
+    </div>
+    <div class="footer__derechos">
+        <span> Todos los derechos reservados desde 2022 </span> <!-- TODS LOS DERECHOS RESERVADOS -->
+    </div>
+</footer><!-- FIN DE PIE DE PAGINA -->
+</body><!-- FIN DE CUERPO DE PAGINA -->
+</html>

@@ -1,0 +1,427 @@
+*{
+    margin: 0px; /* margen externo */
+    padding: 0px; /* margen interno */ 
+}
+
+/* COLOR DE FONDO HEADER NAV */
+.header {
+    position: sticky;
+    top: 0px;
+    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
+}
+
+/* todo piel tecto grande en el nav */
+.header__nombre-pag {
+    text-align: center;
+    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
+}
+
+/* flex */
+.header__nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* QUE LA NAV NO TENGA PUNTITOS y flex */
+.header__lista{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 16px;
+    list-style: none; /* esto hace que no hayan puntitos adelante */
+}
+
+ /* PASAR NAVEGACION DE BLOQUE A LINEA */
+.header__pages{
+    display: inline;
+    padding: 20px;
+}
+
+/* QUITAR SUBRAYADO Y CAMBIAR COLOR DE LAS LETRAS DE NAVEGACION */
+.header__pages a {
+    color: white;
+    text-decoration: none; /* SUBRAYADOS */
+    font-size: 20px;
+}
+
+/* AJUSTAR LOGO y flex EN NAV */
+.header__logo {
+    display: inline;
+}
+
+/* main y flex */
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw; /* view widht ancho de la pantalla */
+}
+
+
+
+
+
+
+                                                 /* INICIO INDEX */
+
+/* NOMBRE DE CADA PAGINA */ /* TIPO DE LETRA, COLOR Y FONDO */
+h1{
+    font-family: 'Fascinate', cursive;
+    color: rgb(202, 69, 91); /* ROSA OSCURO */
+    background-color: rgb(210, 107, 219); /* ROSA LILA */
+}
+
+
+/* TAMAÑO, COLOR DE MARGEN Y BOX MODEL DE IMAGENES GALERIA */
+.galeria__imagen {
+    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+    width: 400px; /* ancho */
+    height: 200px; /* alto */
+    margin: 10px; 
+    padding: 10px; 
+}
+
+/* COLOR FONDO GALERIA */
+.galeria {
+    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
+}
+
+/* COLOR DE FONDO, flex, TAMAÑO Y TIPO DE LETRA DE PAGINA TEXTO INICIO */
+main p {
+    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 0 16px;
+    display: flex;
+    text-align: center;
+}
+
+/* CENTRADO BOX MODEL DE TEXTO */
+.galeria__texto {
+    padding: 50px;
+}
+
+.button {
+    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+}
+
+/* TIPO DE LETRA, BOX MODEL Y COLOR DE FONDO DE BOTON DE TURNO */
+.boton__turno{
+    font-family: 'Fascinate', cursive;
+    background-color: rgb(210, 107, 219); /* ROSA LILA */
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+} 
+
+/* COLOR DE FONDO flex Y BOX MODEL DE MAPS E INSTAGRAM */
+.redes {
+    padding: 30px;
+    background-image: linear-gradient(rgb(233, 166, 166) /* ROSA CLARITO */,rgb(210, 107, 219) /* ROSA LILA */,rgb(202, 69, 91) /* ROSA OSCURO */);
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+/* COLOR DE FONDO y flex DE LOS ITEMS PROPUESTA */
+.items {
+    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+    display: flex;
+}
+
+/* TIPO DE LETRA, COLOR Y TAMAÑO DEL SUBTITULO DE LA PROPUESTA */
+h3{
+    font-family: 'Fascinate', cursive;
+    color: rgb(233, 166, 166); /* ROSA CLARITO */
+    font-size: 30px;
+    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+} 
+
+/* TIPO DE LETRA, BOX MODEL Y TAMAÑO DE LOS ITEMS DE LA PROPUESTA */
+.items__propuesta--letra{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 30px;
+    list-style: square; /* en vez de punto, es cuadrado */
+}
+
+
+/* TAMAÑO DE LETRA DE LOS ITEMS */
+.article {
+    font-size: 25px;
+}
+
+/* ANCHO, COLOR DE MARGEN Y BOX MODEL DEL LOGO PRINCIPAL ABAJO DE LA PROPUESTA */
+.items__logo{
+    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+                                           /* QUIENES SOMOS */
+/* fondo de seccion */
+.seccion {
+    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
+}
+
+/* box model y fondo de margen de imagen */
+.somos__imagen{ 
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+}
+
+/* letra, box model y fondo de parrafo */
+.somos__texto{
+    font-family: 'Roboto', sans-serif; 
+    font-size: 30px;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+    list-style: none; /* saca puntos a los items */
+}
+ /* box y fondo */
+.img{
+    background-color: rgb(210, 107, 219); /* ROSA LILA */
+    padding: 15px;
+}
+
+/* ancho de imagenes */
+.img__altafrecuencia{
+    width: 500px;
+    padding: 15px;
+}
+
+.img_dermaplaning{
+    width: 500px;
+    padding: 15px;
+}
+
+.img__puntadediamante{
+    width: 500px;
+    padding: 15px;
+}
+
+.img__radiofrecuencia{
+    width: 500px;
+    padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+                                             /* SERVICIOS */
+/* fondo y flex de seccion */
+.servicios {
+    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* box model y grid */
+.servicios__img {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;/* unidad de grid: fr. que cada espacio ocupa 1/3 del total */
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "antiage hidratante"
+                         "despigmentante peeling" 
+                         "dermaplaning limpieza"
+                         "extracciones electroporador"
+                         "alta radio";
+}
+
+.servicios__imagen{
+    width: 95%
+}
+
+.antiage {
+    grid-area: antiage;
+    background-image: url(../resources/servicios.tratamiento\ antiage.jpg);
+}
+
+.hidratante {
+    grid-area: hidratante;
+    background-image: url(../resources/servicios.tratamiento\ hidratante.jpg);
+}
+
+.peeling {
+    grid-area: peeling;
+    background-image: url(../resources/servicios.peeling.jpg);
+}
+
+.despigmentante {
+    grid-area: despigmentante;
+    background-image: url(../resources/servicios.tratamiento\ despigmentante.jpg);
+}
+
+.dermaplaning {
+    grid-area: dermaplaning;
+    background-image: url(../resources/servicios.dermaplaning.jpg);
+}
+
+.limpieza {
+    grid-area: limpieza;
+    background-image: url(../resources/servicios.limpieza\ profunda.jpg);
+}
+
+.extracciones {
+    grid-area: extracciones;
+    background-image: url(../resources/servicios.extracciones.jpg);
+}
+
+.electroporador {
+    grid-area: electroporador;
+    background-image: url(../resources/servicios.electroporador.jpg);
+}
+
+.alta {
+    grid-area: alta;
+    background-image: url(../resources/servicios.alta\ frecuencia.jpg);
+}
+
+.radio {
+    grid-area: radio;
+    background-image: url(../resources/servicios.radio\ frecuencia.jpg);
+}
+
+/* ancho de imagenes */
+/* .servicios__imagen { */
+    /* width:300px */
+    /* height: 200px; */
+
+
+
+
+
+
+
+
+
+
+
+                                                /* PROMOS Y SPA */
+/* fondo seccion giftcard */
+.gift{
+    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* tamaño img giftcard */
+.giftcard__img {
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+}
+
+.gift__button {
+    padding: 10px;
+    margin: 20px;
+}
+
+/* fondo y flex seccion SPA */
+.spa{
+    background-color: rgb(210, 107, 219); /* ROSA LILA */ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* tamaño imgenes spa */
+.spa__dayimg{
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+}
+
+.spa__button {
+    padding: 10px;
+    margin: 20px;
+}
+
+
+
+
+
+
+
+                                                  /* CONTACTANOS */ 
+/* COLOR DE FONDO Y BOX MODEL */
+.form {
+    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+}
+
+.form__nombre {
+    padding: 10px;
+}
+
+.form__email {
+    padding: 10px; 
+}
+
+.form__textarea {
+    padding: 10px;
+}
+/* fondo, margin y padding botones de enviar y borrar */
+.form__botones {
+    background-color: rgb(210, 107, 219); /* ROSA LILA */
+    padding: 10px;
+    margin: 10px;
+}
+
+/* fondo de seccion maps*/
+.maps {
+    background-color: rgb(210, 107, 219); /* ROSA LILA */
+}
+ /* box model de link de maps */
+.maps__link{
+    padding: 15px;
+}
+/* box model de imagen logo */
+.maps__imagenlogo{
+    padding: 30px;
+}
+
+
+
+
+
+                                             /* FOOTER */
+/* FONDO degradado DEL FOOTER */
+footer {
+    background-image: linear-gradient(rgb(233, 166, 166) /* ROSA CLARITO */,rgb(210, 107, 219) /* ROSA LILA */); 
+}
+
+
+/* TIPO DE LETRA Y TAMAÑO DE SEGUINOS EN REDES */
+.footer__redes {
+    font-size: 20px;
+    text-align: end;
+    font-family: 'Roboto', sans-serif; 
+}
+
+/* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
+.footer__imagen{
+    background-color: rgb(210, 107, 219); /* ROSA LILA */
+    width: 200px;
+    padding: 15px;
+    margin: 10px;
+}
+
+
