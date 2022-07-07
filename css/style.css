@@ -124,7 +124,7 @@ main p {
 
 /* COLOR DE FONDO y flex DE LOS ITEMS PROPUESTA */
 .items {
-    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+    background-color: rgb(230, 95, 117); /* ROSA OSCURO */
     display: flex;
 }
 
