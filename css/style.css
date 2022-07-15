@@ -10,7 +10,7 @@
     background-color: rgb(233, 166, 166); /* ROSA CLARITO */
 }
 
-/* todo piel tecto grande en el nav */
+/* todo piel texto grande en el nav */
 .header__nombre-pag {
     text-align: center;
     background-color: rgb(233, 166, 166); /* ROSA CLARITO */
@@ -65,75 +65,112 @@
 /* NOMBRE DE CADA PAGINA */ /* TIPO DE LETRA, COLOR Y FONDO */
 h1{
     font-family: 'Fascinate', cursive;
-    color: rgb(202, 69, 91); /* ROSA OSCURO */
-    background-color: rgb(210, 107, 219); /* ROSA LILA */
+    color: white;
+    background-color:rgb(230, 95, 117); 
 }
 
 
 /* TAMAÑO, COLOR DE MARGEN Y BOX MODEL DE IMAGENES GALERIA */
 .galeria__imagen {
-    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+    background-color: rgb(230, 95, 117); /* ROSA OSCURO */
     width: 400px; /* ancho */
     height: 200px; /* alto */
     margin: 10px; 
-    padding: 10px; 
+    padding: 10px;
 }
 
-/* COLOR FONDO GALERIA */
+/* COLOR FONDO flex GALERIA */
 .galeria {
     background-color: rgb(233, 166, 166); /* ROSA CLARITO */
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* COLOR DE FONDO, flex, TAMAÑO Y TIPO DE LETRA DE PAGINA TEXTO INICIO */
 main p {
     background-color: rgb(233, 166, 166); /* ROSA CLARITO */
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     padding: 0 16px;
     display: flex;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
+
 
 /* CENTRADO BOX MODEL DE TEXTO */
 .galeria__texto {
     padding: 50px;
 }
 
+/* fondo, flex boton */
 .button {
-    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+    background-color:rgb(233, 166, 166);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* TIPO DE LETRA, BOX MODEL Y COLOR DE FONDO DE BOTON DE TURNO */
+/* TIPO DE LETRA, BOX MODEL, borde Y COLOR DE FONDO DE BOTON DE TURNO */
 .boton__turno{
     font-family: 'Fascinate', cursive;
     background-color: rgb(210, 107, 219); /* ROSA LILA */
     padding: 10px;
     margin: 10px;
     text-align: center;
+    border-radius: 5px;
 } 
 
 /* COLOR DE FONDO flex Y BOX MODEL DE MAPS E INSTAGRAM */
 .redes {
     padding: 30px;
-    background-image: linear-gradient(rgb(233, 166, 166) /* ROSA CLARITO */,rgb(210, 107, 219) /* ROSA LILA */,rgb(202, 69, 91) /* ROSA OSCURO */);
+    background-image: linear-gradient(rgb(233, 166, 166) /* ROSA CLARITO */,rgb(210, 107, 219) /* ROSA LILA */,rgb(230, 95, 117) /* ROSA OSCURO */);
     background-position: center;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
-/* COLOR DE FONDO y flex DE LOS ITEMS PROPUESTA */
+/* COLOR DE FONDO y grid  y flex DE LOS ITEMS PROPUESTA */
 .items {
-    background-color: rgb(230, 95, 117); /* ROSA OSCURO */
+    background-color: rgb(233, 166, 166);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "propuesta items logo";
     display: flex;
+    flex-wrap: wrap;
 }
+
+.propuesta {
+    grid-column: 1/2;
+    grid-row: 1/2;  
+}
+
+.items {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    
+}
+
+.logo {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
 
 /* TIPO DE LETRA, COLOR Y TAMAÑO DEL SUBTITULO DE LA PROPUESTA */
 h3{
     font-family: 'Fascinate', cursive;
-    color: rgb(233, 166, 166); /* ROSA CLARITO */
+    color: rgb(230, 95, 117);
     font-size: 30px;
-    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+    background-color: rgb(233, 166, 166);
+    display: flex;
+    justify-content: flex-start;
 } 
 
 /* TIPO DE LETRA, BOX MODEL Y TAMAÑO DE LOS ITEMS DE LA PROPUESTA */
@@ -142,6 +179,8 @@ h3{
     font-size: 20px;
     padding: 30px;
     list-style: square; /* en vez de punto, es cuadrado */
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -167,52 +206,102 @@ h3{
 
                                            /* QUIENES SOMOS */
 /* fondo de seccion */
-.seccion {
+main {
     background-color: rgb(233, 166, 166); /* ROSA CLARITO */
 }
 
-/* box model y fondo de margen de imagen */
-.somos__imagen{ 
-    padding: 20px;
-    margin: 20px;
-    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
-}
-
-/* letra, box model y fondo de parrafo */
-.somos__texto{
+/* letra, box model, borde fondo de parrafo */
+.somos__texto {
     font-family: 'Roboto', sans-serif; 
     font-size: 30px;
     padding: 20px;
-    margin: 20px;
-    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+    margin: 30px;
+    text-align: center;
+    background-color: rgb(230, 95, 117); /* ROSA OSCURO */
     list-style: none; /* saca puntos a los items */
+    border: white solid 10px;
+    border-radius: 10px;
 }
- /* box y fondo */
+ /* tipo de letra fondo color y borde del subtitulo de las marcas */
+.subtitulo__marcas{
+    font-family: 'Fascinate', cursive;
+    font-size: 30px;
+    background-color: white;
+    color:  rgb(230, 95, 117); /* ROSA OSCURO */
+    padding: 30px;
+    text-align: center;
+    border: rgb(230, 95, 117) solid 10px;
+    border-radius: 10px;
+}
+
+ /* grid en galeria */
 .img{
-    background-color: rgb(210, 107, 219); /* ROSA LILA */
-    padding: 15px;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "lidherma idraet exel"
+                         "lidherma carthage exel"
+                         "laca carthage zine";
+    
 }
 
-/* ancho de imagenes */
-.img__altafrecuencia{
-    width: 500px;
-    padding: 15px;
+.lidherma {
+    background-image: url("../resources/lidherma.jpg");
+    grid-area: lidherma;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-size: cover;
+    background-position: center;
 }
 
-.img_dermaplaning{
-    width: 500px;
-    padding: 15px;
+.idraet {
+    background-image: url("../resources/idraet dermopuriti.png");
+    grid-area: idraet;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-size: cover;
+    background-position: center;
 }
 
-.img__puntadediamante{
-    width: 500px;
-    padding: 15px;
+.exel {
+    background-image: url("../resources/exel.png");
+    grid-area: exel;
+    grid-column: 3/4;
+    grid-row: 1/3;
+    background-size: cover;
+    background-position: center;
 }
 
-.img__radiofrecuencia{
-    width: 500px;
-    padding: 15px;
+.carthage {
+    background-image: url("../resources/carthage.png");
+    grid-area: carthage;
+    grid-column: 2/3;
+    grid-row: 2/4;
+    background-size: cover;
+    background-position: center;
 }
+
+.laca {
+    background-image: url("../resources/laca.png");
+    grid-area: laca;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-size: cover;
+    background-position: center;
+}
+.zine {
+    background-image: url("../resources/zine.jpg");
+    grid-area: zine;
+    grid-column: 3/4;
+    grid-row: 3/4;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
 
 
 
@@ -224,85 +313,72 @@ h3{
 
 
                                              /* SERVICIOS */
-/* fondo y flex de seccion */
-.servicios {
-    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+/* grid  y flex en servicios */
+.servicios{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-/* box model y grid */
-.servicios__img {
-    padding: 10px;
+    flex-direction: column;
     display: grid;
-    grid-template-columns: 1fr 1fr;/* unidad de grid: fr. que cada espacio ocupa 1/3 del total */
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "antiage hidratante"
-                         "despigmentante peeling" 
-                         "dermaplaning limpieza"
-                         "extracciones electroporador"
-                         "alta radio";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "imagen titulo"
+                         "imagen boton"
 }
 
+.imagen{
+    grid-area: imagen;
+    grid-column: 1/1;
+    grid-row: 1/3;
+}
+
+.titulo {
+    grid-area: titulo;
+    grid-column: 2/3;
+    grid-row: 1/1;
+    text-align: center;
+}
+
+.boton{
+    grid-area: boton;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.servicios__img-seccion{
+    border: rgb(210, 107, 219) /* ROSA LILA */ solid 10px ;
+    border-radius: 15px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "imagen titulo"
+                         "imagen boton"
+}
+
+/* tamaño d imagenes */
 .servicios__imagen{
-    width: 95%
+    width: 300px;
+    height: 200px;
+    border: rgb(230, 95, 117) /* ROSA OSCURO */ solid 10px ;
 }
 
-.antiage {
-    grid-area: antiage;
-    background-image: url(../resources/servicios.tratamiento\ antiage.jpg);
+/* titulo de servicio */
+.servicios__titulo{
+    font-family: 'Fascinate', cursive;
+    font-size: 20px;
+    text-decoration: overline;
 }
 
-.hidratante {
-    grid-area: hidratante;
-    background-image: url(../resources/servicios.tratamiento\ hidratante.jpg);
+/* boton */
+.servicios__boton{
+   background-image: linear-gradient(rgb(233, 166, 166) /* ROSA CLARITO */,rgb(230, 95, 117) /* ROSA OSCURO */);
+   border: rgb(230, 95, 117) /* ROSA LILA */ solid 5px ;
+   border-radius: 15px;
+   padding: 20px; 
+   font-size: 20px;
+   margin: 20px;
 }
 
-.peeling {
-    grid-area: peeling;
-    background-image: url(../resources/servicios.peeling.jpg);
-}
 
-.despigmentante {
-    grid-area: despigmentante;
-    background-image: url(../resources/servicios.tratamiento\ despigmentante.jpg);
-}
-
-.dermaplaning {
-    grid-area: dermaplaning;
-    background-image: url(../resources/servicios.dermaplaning.jpg);
-}
-
-.limpieza {
-    grid-area: limpieza;
-    background-image: url(../resources/servicios.limpieza\ profunda.jpg);
-}
-
-.extracciones {
-    grid-area: extracciones;
-    background-image: url(../resources/servicios.extracciones.jpg);
-}
-
-.electroporador {
-    grid-area: electroporador;
-    background-image: url(../resources/servicios.electroporador.jpg);
-}
-
-.alta {
-    grid-area: alta;
-    background-image: url(../resources/servicios.alta\ frecuencia.jpg);
-}
-
-.radio {
-    grid-area: radio;
-    background-image: url(../resources/servicios.radio\ frecuencia.jpg);
-}
-
-/* ancho de imagenes */
-/* .servicios__imagen { */
-    /* width:300px */
-    /* height: 200px; */
 
 
 
@@ -315,45 +391,103 @@ h3{
 
 
                                                 /* PROMOS Y SPA */
-/* fondo seccion giftcard */
-.gift{
-    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+
+/* grid imgen principal */
+.principal {
+    display: grid;
+    height: 100vh;
+    background-image: url(../resources/spa.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-template-columns: 1 fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-/* tamaño img giftcard */
-.giftcard__img {
+/* flex texto principal */
+.principal__texto {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 50px;
+    text-shadow: 2px 2px 7px black;
+    color: white;
+}
+
+/* grid y flex card */
+.card{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   grid-template-areas: "uno dos tres"
+                        "cuatro cinco seis";
+   gap: 15px; /* espacio entre las tarjetas */
+   margin: 15px;   
+}
+
+.uno {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.dos{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.tres{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.cuatro{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.cinco{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.seis{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+/* tarjetas grid y flex */
+.card__promo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: rgb(210, 107, 219) solid 2px ;
+    border-radius: 10px;
+    padding: 16px;
+    align-items: center;
+}
+
+/* tamaño img cards */
+.card__imagen {
     width: 300px;
     height: 200px;
-    padding: 30px;
 }
 
-.gift__button {
-    padding: 10px;
-    margin: 20px;
+/* texto card */
+.card__texto {
+    text-align: center;
+    font-size: 15px;
 }
 
-/* fondo y flex seccion SPA */
-.spa{
-    background-color: rgb(210, 107, 219); /* ROSA LILA */ 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+/* boton cards */
+.card__button {
+   background-color: rgb(210, 107, 219); /* ROSA LILA */  ;
+   border: rgb(210, 107, 219) /* ROSA LILA */ solid 10px ;
+   border-radius: 15px;
+   color: white;
+   padding: 10px;
 }
 
-/* tamaño imgenes spa */
-.spa__dayimg{
-    width: 300px;
-    height: 200px;
-    padding: 30px;
-}
-
-.spa__button {
-    padding: 10px;
-    margin: 20px;
-}
 
 
 
@@ -362,9 +496,10 @@ h3{
 
 
                                                   /* CONTACTANOS */ 
+
 /* COLOR DE FONDO Y BOX MODEL */
 .form {
-    background-color: rgb(202, 69, 91); /* ROSA OSCURO */
+    background-image: linear-gradient(rgb(233, 166, 166) /* ROSA CLARITO */,rgb(210, 107, 219) /* ROSA LILA */,rgb(230, 95, 117) /* ROSA OSCURO */);
 }
 
 .form__nombre {
@@ -385,17 +520,53 @@ h3{
     margin: 10px;
 }
 
-/* fondo de seccion maps*/
-.maps {
-    background-color: rgb(210, 107, 219); /* ROSA LILA */
+.form__nombre {
+    font-size: 25px;
 }
+
+.form__email {
+    font-size: 25px;
+}
+
+.form__textarea{
+    font-size: 25px;
+}
+
+.form__botones{
+    font-size: 30px;
+}
+
+/* flex maps*/
+.maps {
+    background-color: rgb(233, 166, 166);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.maps__img{
+    width: 500px;
+    height: 400px;
+}
+
+.maps__logo{
+    width: 500px;
+    height: 400px;
+}
+
  /* box model de link de maps */
 .maps__link{
     padding: 15px;
+    margin:20px;
+    border: rgb(210, 107, 219) solid 10px;
+    border-radius: 15px;
 }
 /* box model de imagen logo */
 .maps__imagenlogo{
-    padding: 30px;
+    padding: 15px;
+    margin:20px;
+    border: rgb(210, 107, 219) solid 10px;
+    border-radius: 15px;
 }
 
 
@@ -403,25 +574,472 @@ h3{
 
 
                                              /* FOOTER */
-/* FONDO degradado DEL FOOTER */
+/* foooter grid */
 footer {
-    background-image: linear-gradient(rgb(233, 166, 166) /* ROSA CLARITO */,rgb(210, 107, 219) /* ROSA LILA */); 
+    background-image: linear-gradient(rgb(230, 95, 117), rgb(233, 166, 166) /* ROSA CLARITO */); 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "subtituloinfo subtituloseguimos none"
+                         "info redeslogo derechos";
 }
 
+.subtituloinfo {
+    grid-area: subtituloinfo;
+}
+
+.subtituloseguinos {
+    grid-area: subtituloseguinos;
+}
+
+
+.info {
+    grid-area: info;
+}
+
+.redeslogo {
+    grid-area: redeslogo;
+}
+
+.derechos {
+    grid-area: derechos;
+} 
 
 /* TIPO DE LETRA Y TAMAÑO DE SEGUINOS EN REDES */
 .footer__redes {
     font-size: 20px;
-    text-align: end;
+    text-align: center;
     font-family: 'Roboto', sans-serif; 
+    justify-content: center;
+    align-items: center;
 }
+
+ /* texto subtitulos */
+.footer__texto {
+    font-family: 'Fascinate', cursive;
+    color: white;
+    font-size: 30px;
+}
+
 
 /* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
 .footer__imagen{
-    background-color: rgb(210, 107, 219); /* ROSA LILA */
     width: 200px;
     padding: 15px;
     margin: 10px;
+    border: rgb(233, 166, 166) solid 10px ;
+    border-radius: 10px;
 }
 
 
+
+
+                                 /* MEDIA QUERIE */
+                
+
+/* media de celular */
+/* 99.9% siempre debe haber una sola columna */
+/* 0,1% son galerias cuadriculadas que pueden tener hasta 3 columnas */
+@media (min-width: 320px) and (max-width: 575px) {
+    
+    /* index TAMAÑO IMAGENES GALERIA */
+   .galeria__imagen {
+    width: 280px; /* ancho */
+    }  
+
+    /* index ANCHO DEL LOGO PRINCIPAL ABAJO DE LA PROPUESTA */
+    .items__logo{
+    width: 200px;
+    }
+
+    /* quienes somos logos de marcas */
+    .img{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "lidherma" 
+                             "idraet"
+                             "exel"
+                             "carthage"
+                             "laca"
+                             "zine";
+    }
+    
+    .lidherma {
+        background-image: url("../resources/lidherma.jpg");
+        grid-area: lidherma;
+        grid-column: 1/1;
+        grid-row: auto;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .idraet {
+        background-image: url("../resources/idraet dermopuriti.png");
+        grid-area: idraet;
+        grid-column: 1/1;
+        grid-row: auto;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .exel {
+        background-image: url("../resources/exel.png");
+        grid-area: exel;
+        grid-column: 1/1;
+        grid-row: auto;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .carthage {
+        background-image: url("../resources/carthage.png");
+        grid-area: carthage;
+        grid-column: 1/1;
+        grid-row: auto;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .laca {
+        background-image: url("../resources/laca.png");
+        grid-area: laca;
+        grid-column: 1/1;
+        grid-row: auto;
+        background-size: cover;
+        background-position: center;
+    }
+    .zine {
+        background-image: url("../resources/zine.jpg");
+        grid-area: zine;
+        grid-column: 1/1;
+        grid-row:auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /* servicios tarjetas */
+    .servicios{
+        display: flex;
+        flex-direction: column;
+    }
+     
+    .servicios__imagen{
+        width: 100px;
+        height: 100px;
+        border: rgb(230, 95, 117) /* ROSA OSCURO */ solid 10px ;
+    }
+    
+    .servicios__titulo{
+        font-family: 'Fascinate', cursive;
+        font-size: 15px;
+        text-decoration: overline;
+        display: flex;
+        text-align: center;
+    }
+    
+    .servicios__boton{
+       background-image: linear-gradient(rgb(233, 166, 166) /* ROSA CLARITO */,rgb(230, 95, 117) /* ROSA OSCURO */);
+       border: rgb(230, 95, 117) /* ROSA LILA */ solid 5px ;
+       border-radius: 5px;
+       padding: 5px; 
+       font-size: 10px;
+       margin: 5px;
+       width: 100px;
+       height: 50px;
+    }
+    
+
+
+    /* promos tarjetas */
+
+    .card{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "uno"
+                             "dos"
+                             "tres"
+                             "cuatro" 
+                             "cinco" 
+                             "seis";  
+     }
+     
+     .uno {
+         grid-column: 1/2;
+         grid-row: 1/2;
+     }
+     
+     .dos{
+         grid-column: 1/2;
+         grid-row: 2/3;
+     }
+     
+     .tres{
+         grid-column: 1/2;
+         grid-row: 3/4;
+     }
+     
+     .cuatro{
+         grid-column: 1/2;
+         grid-row: 4/5;
+     }
+     
+     .cinco{
+         grid-column: 1/2;
+         grid-row: 5/6;
+     }
+     
+     .seis{
+         grid-column: 1/2;
+         grid-row: 6/7;
+     }
+
+     .card__imagen {
+        width: 100px;
+        height: 100px;
+    }  
+
+/* cotactanos */
+    .maps {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .maps__img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .maps__logo{
+        width: 200px;
+        height: 200px;
+    }
+    
+
+    /* footer*/
+
+     .footer__texto {
+    text-align: center;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "subtituloinfo"
+                            "subtituloseguimos"
+                            "none"
+                            "info"
+                            "redeslogo" 
+                            "derechos";
+    }
+    
+    .subtituloinfo {
+        grid-area: subtituloinfo;
+    }
+    
+    .subtituloseguinos {
+        grid-area: subtituloseguinos;
+    }
+    
+    .info {
+        grid-area: info;
+    }
+    
+    .redeslogo {
+        grid-area: redeslogo;
+    }
+    
+    .derechos {
+        grid-area: derechos;
+    }
+
+    .footer__imagen{
+        width: 100px;
+        padding: 15px;
+        margin: 10px;
+        border: rgb(233, 166, 166) solid 10px ;
+        border-radius: 10px;
+    }
+    
+}
+
+/* media querie de tablet */
+@media (min-width: 576px) and (max-width: 992px) { 
+    
+
+    /* quienes somos logos de marcas */
+    .img{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "lidherma" 
+                             "idraet"
+                             "exel"
+                             "carthage"
+                             "laca"
+                             "zine";
+    }
+    
+    .lidherma {
+        background-image: url("../resources/lidherma.jpg");
+        grid-area: lidherma;
+        grid-column: 1/1;
+        grid-row: auto;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .idraet {
+        background-image: url("../resources/idraet dermopuriti.png");
+        grid-area: idraet;
+        grid-column: 1/1;
+        grid-row: auto;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .exel {
+        background-image: url("../resources/exel.png");
+        grid-area: exel;
+        grid-column: 1/1;
+        grid-row: auto;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .carthage {
+        background-image: url("../resources/carthage.png");
+        grid-area: carthage;
+        grid-column: 1/1;
+        grid-row: auto;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .laca {
+        background-image: url("../resources/laca.png");
+        grid-area: laca;
+        grid-column: 1/1;
+        grid-row: auto;
+        background-size: cover;
+        background-position: center;
+    }
+    .zine {
+        background-image: url("../resources/zine.jpg");
+        grid-area: zine;
+        grid-column: 1/1;
+        grid-row:auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* servicios tarjetas */
+    .servicios{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* promos tarjetas */
+    .card{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "uno dos"
+                             "tres cuatro" 
+                             "cinco seis";  
+     }
+     
+     .uno {
+         grid-column: 1/2;
+         grid-row: 1/2;
+     }
+     
+     .dos{
+         grid-column: 2/3;
+         grid-row: 1/2;
+     }
+     
+     .tres{
+         grid-column: 1/2;
+         grid-row: 2/3;
+     }
+     
+     .cuatro{
+         grid-column: 2/3;
+         grid-row: 2/3;
+     }
+     
+     .cinco{
+         grid-column: 1/2;
+         grid-row: 3/4;
+     }
+     
+     .seis{
+         grid-column: 2/3;
+         grid-row: 3/4;
+     }
+
+     .card__imagen {
+        width: 200px;
+        height: 200px;
+    }  
+    
+
+    /* cotactanos */
+    .maps {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .maps__img{
+        width: 400px;
+        height: 400px;
+    }
+
+    .maps__logo{
+        width: 400px;
+        height: 400px;
+    }
+
+    /* footer*/
+    .footer__texto {
+        text-align: center;
+        }
+    
+        footer {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "subtituloinfo"
+                                "subtituloseguimos"
+                                "none"
+                                "info"
+                                "redeslogo" 
+                                "derechos";
+        }
+        
+        .subtituloinfo {
+            grid-area: subtituloinfo;
+        }
+        
+        .subtituloseguinos {
+            grid-area: subtituloseguinos;
+        }
+        
+        .info {
+            grid-area: info;
+        }
+        
+        .redeslogo {
+            grid-area: redeslogo;
+        }
+        
+        .derechos {
+            grid-area: derechos;
+        }
+    
+        .footer__imagen{
+            width: 300px;
+            padding: 15px;
+            margin: 10px;
+            border: rgb(233, 166, 166) solid 10px ;
+            border-radius: 10px;
+        }
+}
