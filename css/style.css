@@ -515,7 +515,7 @@ main {
 }
 /* fondo, margin y padding botones de enviar y borrar */
 .form__botones {
-    background-color: rgb(210, 107, 219); /* ROSA LILA */
+    background-image: linear-gradient(rgb(210, 107, 219), white);
     padding: 10px;
     margin: 10px;
 }
