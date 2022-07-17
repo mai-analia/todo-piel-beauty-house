@@ -36,6 +36,12 @@
     padding: 20px;
 }
 
+/* TRANFORMACIONES Y TRANSICIONES */
+.header__pages:hover{
+    transform: scale(1.15, 1.15); /* agrandamiento */
+    transition: all 1s;
+}
+
 /* QUITAR SUBRAYADO Y CAMBIAR COLOR DE LAS LETRAS DE NAVEGACION */
 .header__pages a {
     color: white;
@@ -117,12 +123,18 @@ main p {
 /* TIPO DE LETRA, BOX MODEL, borde Y COLOR DE FONDO DE BOTON DE TURNO */
 .boton__turno{
     font-family: 'Fascinate', cursive;
-    background-color: rgb(210, 107, 219); /* ROSA LILA */
     padding: 10px;
     margin: 10px;
     text-align: center;
     border-radius: 5px;
 } 
+
+/* tranformaciones y transiciones */
+.boton__turno:hover{
+    background-image: radial-gradient(white ,rgb(230, 95, 117) /* ROSA OSCURO */);
+    transform: scale(1.15, 1.15); /* agrandamiento */
+    transition: all 1s;
+}
 
 /* COLOR DE FONDO flex Y BOX MODEL DE MAPS E INSTAGRAM */
 .redes {
@@ -226,12 +238,18 @@ main {
 .subtitulo__marcas{
     font-family: 'Fascinate', cursive;
     font-size: 30px;
-    background-color: white;
     color:  rgb(230, 95, 117); /* ROSA OSCURO */
     padding: 30px;
     text-align: center;
     border: rgb(230, 95, 117) solid 10px;
     border-radius: 10px;
+}
+
+/* tranformaciones y transiciones */
+.subtitulo__marcas:hover{
+    background-image: radial-gradient(white ,rgb(230, 95, 117) /* ROSA OSCURO */);
+    transform: rotate(10deg); /* rotacion */
+    transition: all 2s;
 }
 
  /* grid en galeria */
@@ -354,6 +372,12 @@ main {
                          "imagen boton"
 }
 
+/* tranformaciones y transiciones */
+.servicios__img-seccion:hover{
+    transform: scale(1.05, 1.05);
+    transition: all 2s;
+}
+
 /* tamaño d imagenes */
 .servicios__imagen{
     width: 300px;
@@ -370,12 +394,18 @@ main {
 
 /* boton */
 .servicios__boton{
-   background-image: linear-gradient(rgb(233, 166, 166) /* ROSA CLARITO */,rgb(230, 95, 117) /* ROSA OSCURO */);
    border: rgb(230, 95, 117) /* ROSA LILA */ solid 5px ;
    border-radius: 15px;
    padding: 20px; 
    font-size: 20px;
    margin: 20px;
+}
+
+/* tranformaciones y transiciones */
+.servicios__boton:hover{
+    background-image: radial-gradient(white ,rgb(230, 95, 117) /* ROSA OSCURO */);
+    transform: scale(1.15, 1.15);
+    transition: all 3s;
 }
 
 
@@ -431,9 +461,21 @@ main {
     grid-row: 1/2;
 }
 
+/* tranformaciones y transiciones */
+.uno:hover{
+    transform: rotate(10deg);
+    transition: all 1s;
+}
+
 .dos{
     grid-column: 2/3;
     grid-row: 1/2;
+}
+
+/* tranformaciones y transiciones */
+.dos:hover{
+    transform: rotate(-10deg);
+    transition: all 1s;
 }
 
 .tres{
@@ -441,9 +483,21 @@ main {
     grid-row: 1/2;
 }
 
+/* tranformaciones y transiciones */
+.tres:hover{
+    transform: rotate(10deg);
+    transition: all 1s;
+}
+
 .cuatro{
     grid-column: 1/2;
     grid-row: 2/3;
+}
+
+/* tranformaciones y transiciones */
+.cuatro:hover{
+    transform: rotate(-10deg);
+    transition: all 1s;
 }
 
 .cinco{
@@ -451,9 +505,21 @@ main {
     grid-row: 2/3;
 }
 
+/* tranformaciones y transiciones */
+.cinco:hover{
+    transform: rotate(10deg);
+    transition: all 1s;
+}
+
 .seis{
     grid-column: 3/4;
     grid-row: 2/3;
+}
+
+/* tranformaciones y transiciones */
+.seis:hover{
+    transform: rotate(-10deg);
+    transition: all 1s;
 }
 
 /* tarjetas grid y flex */
@@ -463,7 +529,7 @@ main {
     justify-content: center;
     border: rgb(210, 107, 219) solid 2px ;
     border-radius: 10px;
-    padding: 16px;
+    padding: 5px;
     align-items: center;
 }
 
@@ -481,13 +547,19 @@ main {
 
 /* boton cards */
 .card__button {
-   background-color: rgb(210, 107, 219); /* ROSA LILA */  ;
-   border: rgb(210, 107, 219) /* ROSA LILA */ solid 10px ;
+   border: rgb(210, 107, 219) /* ROSA LILA */ solid 2px ;
    border-radius: 15px;
-   color: white;
+   color: black;
    padding: 10px;
+   margin: 10px;
 }
 
+/* tranformaciones y transiciones */
+.card__button:hover{
+    background-image: radial-gradient(white ,rgb(230, 95, 117) /* ROSA OSCURO */);
+    transform: scale(1.15, 1.15);
+    transition: all 1s;
+}
 
 
 
@@ -515,9 +587,15 @@ main {
 }
 /* fondo, margin y padding botones de enviar y borrar */
 .form__botones {
-    background-image: linear-gradient(rgb(210, 107, 219), white);
     padding: 10px;
     margin: 10px;
+}
+
+/* tranformaciones y transiciones */
+.form__botones:hover{
+    background-image: radial-gradient(white ,rgb(230, 95, 117) /* ROSA OSCURO */);
+    transform: scale(1.15, 1.15);
+    transition: all 1s;
 }
 
 .form__nombre {
