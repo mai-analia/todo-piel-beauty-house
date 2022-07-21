@@ -3,6 +3,26 @@
     padding: 0px; /* margen interno */ 
 }
 
+/* nav bootstrap */
+.nav-link{
+    font-size: 20px;
+}
+
+.nav-link:hover{
+    transform: scale(1.15, 1.15); /* agrandamiento */
+    transition: all 1s;
+}
+
+.navbar navbar-expand-lg bg-light{
+    display: flex;
+    flex-wrap: wrap;
+    display: inline;
+}
+
+.container-fluid{
+    display: inline;
+}
+
 /* COLOR DE FONDO HEADER NAV */
 .header {
     position: sticky;
@@ -16,43 +36,11 @@
     background-color: rgb(233, 166, 166); /* ROSA CLARITO */
 }
 
-/* flex */
-.header__nav{
-    display: flex;
-    flex-wrap: wrap;
+/* color boton search */
+.btn {
+    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
 }
 
-/* QUE LA NAV NO TENGA PUNTITOS y flex */
-.header__lista{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 16px;
-    list-style: none; /* esto hace que no hayan puntitos adelante */
-}
-
- /* PASAR NAVEGACION DE BLOQUE A LINEA */
-.header__pages{
-    display: inline;
-    padding: 20px;
-}
-
-/* TRANFORMACIONES Y TRANSICIONES */
-.header__pages:hover{
-    transform: scale(1.15, 1.15); /* agrandamiento */
-    transition: all 1s;
-}
-
-/* QUITAR SUBRAYADO Y CAMBIAR COLOR DE LAS LETRAS DE NAVEGACION */
-.header__pages a {
-    color: white;
-    text-decoration: none; /* SUBRAYADOS */
-    font-size: 20px;
-}
-
-/* AJUSTAR LOGO y flex EN NAV */
-.header__logo {
-    display: inline;
-}
 
 /* main y flex */
 .main{
@@ -68,13 +56,13 @@
 
                                                  /* INICIO INDEX */
 
+                                
 /* NOMBRE DE CADA PAGINA */ /* TIPO DE LETRA, COLOR Y FONDO */
 h1{
     font-family: 'Fascinate', cursive;
     color: white;
     background-color:rgb(230, 95, 117); 
 }
-
 
 /* TAMAÑO, COLOR DE MARGEN Y BOX MODEL DE IMAGENES GALERIA */
 .galeria__imagen {
@@ -89,9 +77,9 @@ h1{
 .galeria {
     background-color: rgb(233, 166, 166); /* ROSA CLARITO */
     display: flex; 
-    flex-direction: row;
+    /* flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 /* COLOR DE FONDO, flex, TAMAÑO Y TIPO DE LETRA DE PAGINA TEXTO INICIO */
@@ -611,7 +599,7 @@ main {
 }
 
 .form__botones{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 /* flex maps*/
