@@ -28,6 +28,7 @@
     position: sticky;
     top: 0px;
     background-color: rgb(233, 166, 166); /* ROSA CLARITO */
+    z-index: inherit;
 }
 
 /* todo piel texto grande en el nav */
@@ -433,14 +434,15 @@ main {
 }
 
 /* grid y flex card */
-.card{
+.card__seccion{
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: 1fr 1fr;
    grid-template-areas: "uno dos tres"
                         "cuatro cinco seis";
-   gap: 15px; /* espacio entre las tarjetas */
+   gap: 20px; /* espacio entre las tarjetas */
    margin: 15px;   
+   padding: 15px;
 }
 
 .uno {
@@ -526,10 +528,17 @@ main {
     height: 200px;
 }
 
-/* texto card */
-.card__texto {
+.card__titulo{
     text-align: center;
-    font-size: 15px;
+    font-size: 30px;
+    font-family: 'Fascinate', cursive;
+}
+
+/* texto card */
+p .card__texto {
+    text-align: center;
+    font-size: 20px;
+    background-color: white;
 }
 
 /* boton cards */
@@ -539,6 +548,7 @@ main {
    color: black;
    padding: 10px;
    margin: 10px;
+   align-items: center;
 }
 
 /* tranformaciones y transiciones */
@@ -818,7 +828,7 @@ footer {
 
     /* promos tarjetas */
 
-    .card{
+    .card__seccion{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas: "uno"
@@ -1004,7 +1014,7 @@ footer {
     }
 
     /* promos tarjetas */
-    .card{
+    .card__seccion{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: "uno dos"
