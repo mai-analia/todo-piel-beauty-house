@@ -20,9 +20,9 @@
 <body><!-- INICIO DE CUERPO DE PAGINA -->
     <header class="header"> 
         <h1 class="header__nombre-pag animate__animated animate__bounce"> TODO PIEL BEAUTY HOUSE </h1>
-        <nav class="navbar navbar-expand-lg header">
+        <nav class="navbar navbar-expand-lg nav">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="../index.html">
                     <img src="../resources/favicon.ico" alt="">
                   </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,83 +30,95 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
+                  <li class="nav__page">
                     <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav__page">
                     <a class="nav-link active" aria-current="page" href="quienes-somos.html">Quienes Somos</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav__page">
                     <a class="nav-link active" aria-current="page" href="servicios.html">Servicios</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav__page">
                     <a class="nav-link active" aria-current="page" href="#">Promos y SPA</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav__page">
                     <a class="nav-link active" aria-current="page" href="contactanos.html">Contactanos</a>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="boton__turno btn-outline-success" type="submit">Search</button>
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                  <button class="boton__turno btn-outline-success" type="submit">Buscar</button>
                 </form>
               </div>
             </div>
           </nav>
     </header>
   <main> <!-- INICIO DE MAIN -->
-        <h1> Promos y Spa </h1>
+        <h2> Promos y Spa </h2>
         <section class="principal">
-            <h2 class="principal__texto">Gift Cards y Day Spa</h2>
+            <h4 class="principal__texto">Gift Cards y Day Spa</h4>
         </section>
         <section class="card__seccion">
           <div class="card">
             <img src="../resources/GIFT CARD.jpg" class="card-img-top" alt="gift card">
+            <div class="card-body">
               <h5 class="card__titulo">Gift Card</h5>
               <p class="card__texto">Vale x $2500</p>
-              <a class="btn card__button">OBTENER</a>
+              <a href="contactanos.html" class="btn card__button">OBTENER</a>
+            </div>
           </div>
           <div class="card">
             <img src="../resources/GIFT CARD.jpg" class="card-img-top" alt="gift card">
+            <div class="card-body">
               <h5 class="card__titulo">Gift Card</h5>
               <p class="card__texto">Vale x $3500</p>
-              <a href="#" class="btn card__button">OBTENER</a>
+              <a href="contactanos.html" class="btn card__button">OBTENER</a>
+            </div>
           </div>
           <div class="card">
             <img src="../resources/GIFT CARD.jpg" class="card-img-top" alt="gift card">
+            <div class="card-body">
               <h5 class="card__titulo">Gift Card</h5>
               <p class="card__texto">Vale x $4500</p>
-              <a href="#" class="btn card__button">OBTENER</a>
+              <a href="contactanos.html" class="btn card__button">OBTENER</a>
+            </div>
           </div>
           <div class="card">
             <img src="../resources/DAY SPA.jpg" class="card-img-top" alt="day spa">
+            <div class="card-body">
               <h5 class="card__titulo">Day Spa Individual 4hs</h5>
               <p class="card__texto">Incluye 30 min de masajes descontracturantes o con piedras calientes, limpieza facial, hidratacion capilar, exfoliacion corporal, sauna seco, reflexologia, hidromasaje, brunch</p>
-              <a href="#" class="btn card__button">OBTENER</a>
+              <a href="contactanos.html" class="btn card__button">OBTENER</a>
+            </div>
           </div>
           <div class="card">
             <img src="../resources/DAY SPA AMIGAS.jpg" class="card-img-top" alt="day spa amigas">
+            <div class="card-body">
               <h5 class="card__titulo">Day Spa Amigas 4hs</h5>
               <p class="card__texto">Incluye 30 min de masajes con piedras calientes, limpieza facial, exfoliacion corporal, sauna seco, hidromasaje, brunch</p>
-              <a href="#" class="btn card__button">OBTENER</a>
+              <a href="contactanos.html" class="btn card__button">OBTENER</a>
+            </div>
           </div>
           <div class="card">
             <img src="../resources/day spa parejas.jpg" class="card-img-top" alt="day spa parejas">
+            <div class="card-body">
               <h5 class="card__titulo">Day Spa Parejas 4hs</h5>
               <p class="card__texto">Incluye 30 min de masajes descontracturantes, limpieza facial, exfoliacion corporal, sauna seco, reflexologia, hidromasaje, brunch</p>
-              <a href="#" class="btn card__button">OBTENER</a>
+              <a href="contactanos.html" class="btn card__button">OBTENER</a>
+            </div>
           </div>
       </section>
   </main><!-- FIN DE MAIN -->
-<footer> <!-- PIE DE PAGINA -->
+<footer class="footer"> <!-- PIE DE PAGINA -->
     <div class="footer__info"> 
-        <p class="footer__texto"> INFO </p>
-        <P>Avenida de Mayo 360</P>
-        <p>CP 1704 Ramos Mejia, Argentina</p>
+        <p class="footer__texto subtituloinfo"> INFO </p>
+        <P class="footer__texto-dos info">Avenida de Mayo 360</P>
+        <p class="footer__texto-dos info">CP 1704 Ramos Mejia, Argentina</p>
     </div>
     <div class="footer__redes">
-        <p class="footer__texto"> SEGUINOS</p>
-        <img class ="footer__imagen" src="../resources/vectores redes.jpg" alt="logo de redes sociales"> <!-- IMAGEN REDES SOCIALES -->
+        <p class="footer__texto subtituloseguinos"> SEGUINOS</p>
+        <img class ="footer__imagen redeslogo" src="resources/vectores redes.jpg" alt="logo de redes sociales"> <!-- IMAGEN REDES SOCIALES -->
     </div>
     <div class="footer__derechos">
         <span> Todo Piel Beauty House (c) Todos los derechos reservados desde 2022 </span> <!-- TODS LOS DERECHOS RESERVADOS -->
