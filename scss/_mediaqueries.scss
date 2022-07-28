@@ -1,0 +1,458 @@
+/* MEDIA QUERIE */
+                
+/* media de celular */
+/* 99.9% siempre debe haber una sola columna */
+/* 0,1% son galerias cuadriculadas que pueden tener hasta 3 columnas */
+@media (min-width: 320px) and (max-width: 575px) {
+    
+    /* index TAMAÑO IMAGENES GALERIA */
+   .galeria__imagen {
+    width: 280px; /* ancho */
+    }  
+
+    /* index ANCHO DEL LOGO PRINCIPAL ABAJO DE LA PROPUESTA */
+    .items__logo{
+    width: 200px;
+    }
+
+    /* quienes somos logos de marcas */
+    .img{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "lidherma" 
+                             "idraet"
+                             "exel"
+                             "carthage"
+                             "laca"
+                             "zine";
+
+                             .lidherma {
+                                background-image: url("../resources/lidherma.jpg");
+                                grid-area: lidherma;
+                                grid-column: 1/1;
+                                grid-row: auto;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            
+                            .idraet {
+                                background-image: url("../resources/idraet dermopuriti.png");
+                                grid-area: idraet;
+                                grid-column: 1/1;
+                                grid-row: auto;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            
+                            .exel {
+                                background-image: url("../resources/exel.png");
+                                grid-area: exel;
+                                grid-column: 1/1;
+                                grid-row: auto;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            
+                            .carthage {
+                                background-image: url("../resources/carthage.png");
+                                grid-area: carthage;
+                                grid-column: 1/1;
+                                grid-row: auto;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            
+                            .laca {
+                                background-image: url("../resources/laca.png");
+                                grid-area: laca;
+                                grid-column: 1/1;
+                                grid-row: auto;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            .zine {
+                                background-image: url("../resources/zine.jpg");
+                                grid-area: zine;
+                                grid-column: 1/1;
+                                grid-row:auto;
+                                background-size: cover;
+                                background-position: center;
+                            }
+    }
+    
+    
+
+
+    /* servicios tarjetas */
+    .servicios{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        &__imagen{
+            width: 100px;
+            height: 100px;
+            border: $color-secundario solid 10px ;
+        }
+
+        &__titulo{
+            font-family: $font-fascinate;
+            font-size: 13px;
+            text-decoration: overline;
+            display: flex;
+            text-align: center;
+            margin: 0%;
+        }
+
+        &__boton{
+            background-image: linear-gradient($color-principal,$color-secundario);
+            border: $color-secundario solid 5px ;
+            border-radius: 5px;
+            padding: 5px; 
+            font-size: 10px;
+            margin: 5px;
+            width: 100px;
+            height: 50px;
+         }
+    }
+    
+    .servicios__img-seccion{
+        margin: 10px;
+    }
+    
+
+
+    /* promos tarjetas */
+    .card__seccion{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "uno"
+                             "dos"
+                             "tres"
+                             "cuatro" 
+                             "cinco" 
+                             "seis";  
+
+                            .uno {
+                                grid-column: 1/2;
+                                grid-row: 1/2;
+                            }
+                            
+                            .dos{
+                                grid-column: 1/2;
+                                grid-row: 2/3;
+                            }
+                            
+                            .tres{
+                                grid-column: 1/2;
+                                grid-row: 3/4;
+                            }
+                            
+                            .cuatro{
+                                grid-column: 1/2;
+                                grid-row: 4/5;
+                            }
+                            
+                            .cinco{
+                                grid-column: 1/2;
+                                grid-row: 5/6;
+                            }
+                            
+                            .seis{
+                                grid-column: 1/2;
+                                grid-row: 6/7;
+                            }
+
+            &__imagen {
+                width: 100px;
+                height: 100px;
+            }  
+     }
+     
+     
+
+
+/* cotactanos */
+    .maps {
+        display: flex;
+        flex-direction: column;
+
+        &__img{
+            width: 200px;
+            height: 200px;
+        }
+
+        &__logo{
+            width: 200px;
+            height: 200px;
+        }
+    }
+    
+
+    /* footer*/
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "subtituloinfo"
+                            "subtituloseguimos"
+                            "none"
+                            "info"
+                            "redeslogo" 
+                            "derechos";
+
+                            .subtituloinfo {
+                                grid-area: subtituloinfo;
+                            }
+                            
+                            .subtituloseguinos {
+                                grid-area: subtituloseguinos;
+                            }
+                            
+                            .info {
+                                grid-area: info;
+                            }
+                            
+                            .redeslogo {
+                                grid-area: redeslogo;
+                            }
+                            
+                            .derechos {
+                                grid-area: derechos;
+                            }
+
+                .footer{
+                    &__imagen{
+                        width: 100px;
+                        padding: 15px;
+                        margin: 10px;
+                        border: $color-principal solid 10px ;
+                        border-radius: 10px;
+                    }
+            
+                    &__texto {
+                        text-align: center;
+                        }
+            
+                }
+    }
+    
+}
+
+
+
+
+/* media querie de tablet */
+@media (min-width: 576px) and (max-width: 992px) { 
+    
+
+    /* quienes somos logos de marcas */
+    .img{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "lidherma" 
+                             "idraet"
+                             "exel"
+                             "carthage"
+                             "laca"
+                             "zine";
+
+                             .lidherma {
+                                background-image: url("../resources/lidherma.jpg");
+                                grid-area: lidherma;
+                                grid-column: 1/1;
+                                grid-row: auto;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            
+                            .idraet {
+                                background-image: url("../resources/idraet dermopuriti.png");
+                                grid-area: idraet;
+                                grid-column: 1/1;
+                                grid-row: auto;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            
+                            .exel {
+                                background-image: url("../resources/exel.png");
+                                grid-area: exel;
+                                grid-column: 1/1;
+                                grid-row: auto;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            
+                            .carthage {
+                                background-image: url("../resources/carthage.png");
+                                grid-area: carthage;
+                                grid-column: 1/1;
+                                grid-row: auto;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            
+                            .laca {
+                                background-image: url("../resources/laca.png");
+                                grid-area: laca;
+                                grid-column: 1/1;
+                                grid-row: auto;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            .zine {
+                                background-image: url("../resources/zine.jpg");
+                                grid-area: zine;
+                                grid-column: 1/1;
+                                grid-row:auto;
+                                background-size: cover;
+                                background-position: center;
+                            }
+    }
+    
+    
+
+    /* servicios tarjetas */
+    .servicios{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        &__imagen{
+            width: 200px;
+            height: 200px;
+            border: $color-secundario solid 10px ;
+        }
+
+        &__titulo{
+            font-family: $font-fascinate;
+            font-size: 25px;
+            text-decoration: overline;
+            display: flex;
+            text-align: center;
+            margin: 0%;
+        }
+
+        &__boton{
+            background-image: linear-gradient($color-principal,$color-secundario);
+            border: $color-secundario solid 5px ;
+            border-radius: 5px;
+            padding: 5px; 
+            font-size: 15px;
+            margin: 5px;
+            width: 200px;
+            height: 50px;
+         }
+    }
+    
+    .servicios__img-seccion{
+        margin: 10px;
+    }
+
+    /* promos tarjetas */
+    .card__seccion{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "uno dos"
+                             "tres cuatro" 
+                             "cinco seis";  
+
+                             .uno {
+                                grid-column: 1/2;
+                                grid-row: 1/2;
+                            }
+                            
+                            .dos{
+                                grid-column: 2/3;
+                                grid-row: 1/2;
+                            }
+                            
+                            .tres{
+                                grid-column: 1/2;
+                                grid-row: 2/3;
+                            }
+                            
+                            .cuatro{
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                            }
+                            
+                            .cinco{
+                                grid-column: 1/2;
+                                grid-row: 3/4;
+                            }
+                            
+                            .seis{
+                                grid-column: 2/3;
+                                grid-row: 3/4;
+                            }
+
+                &__imagen {
+                    width: 200px;
+                    height: 200px;
+                }  
+     }
+    
+
+    /* cotactanos */
+    .maps {
+        display: flex;
+        flex-direction: column;
+
+        &__img{
+            width: 400px;
+            height: 400px;
+        }
+
+        &__logo{
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+    /* footer*/
+        footer {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "subtituloinfo"
+                                "subtituloseguimos"
+                                "none"
+                                "info"
+                                "redeslogo" 
+                                "derechos";
+
+                                .subtituloinfo {
+                                    grid-area: subtituloinfo;
+                                }
+                                
+                                .subtituloseguinos {
+                                    grid-area: subtituloseguinos;
+                                }
+                                
+                                .info {
+                                    grid-area: info;
+                                }
+                                
+                                .redeslogo {
+                                    grid-area: redeslogo;
+                                }
+                                
+                                .derechos {
+                                    grid-area: derechos;
+                                }
+
+                    .footer{
+                        &__texto {
+                            text-align: center;
+                        }
+
+                        &__imagen{
+                            width: 300px;
+                            padding: 15px;
+                            margin: 10px;
+                            border: $color-principal solid 10px ;
+                            border-radius: 10px;
+                        }
+                    }
+        }
+}

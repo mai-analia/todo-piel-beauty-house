@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "<h1> Todo Piel Beauty House </h1>\r <p> Este sitio esta pensado para un centro de estetica para el curso de Desarrollo web de Coder </p>",
   "main": "index.js",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
@@ -17,10 +21,5 @@
   "bugs": {
     "url": "https://github.com/mai-analia/todo-piel-beauty-house/issues"
   },
-  "homepage": "https://github.com/mai-analia/todo-piel-beauty-house#readme",
-  "dependencies": {},
-  "devDependencies": {
-    "node-sass": "^7.0.1",
-    "nodemon": "^2.0.19"
-  }
+  "homepage": "https://github.com/mai-analia/todo-piel-beauty-house#readme"
 }

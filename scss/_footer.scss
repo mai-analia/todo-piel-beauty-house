@@ -1,0 +1,61 @@
+                                     /* FOOTER */
+footer {/* foooter grid */
+    background-image: linear-gradient($color-secundario, $color-principal); 
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas: "subtituloinfo subtituloseguimos none"
+                         "info redeslogo derechos";
+
+                         .subtituloinfo {
+                            grid-area: subtituloinfo;
+                            margin: 15px;
+                            padding: 10px;
+                        }
+                        
+                        .subtituloseguinos {
+                            grid-area: subtituloseguinos;
+                            margin: 15px;
+                            padding: 10px;
+                        }
+                        
+                        
+                        .info {
+                            grid-area: info;
+                            margin: 15px;
+                            font-size: 25px;
+                        }
+                        
+                        .redeslogo {
+                            grid-area: redeslogo;
+                        }
+                        
+                        .derechos {
+                            grid-area: derechos;
+                            margin: 15px;
+                            padding: auto;
+                        } 
+
+        .footer{
+            &__redes {/* TIPO DE LETRA Y TAMAÑO DE SEGUINOS EN REDES */
+                font-size: 20px;
+                text-align: center;
+                font-family: $font-roboto; 
+                justify-content: center;
+                align-items: center;
+            }
+
+            &__texto {/* texto subtitulos */
+                font-family: $font-fascinate;
+                color: white;
+                font-size: 30px;
+            }
+
+            &__imagen{/* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
+                width: 200px;
+                padding: 15px;
+                margin: 10px;
+                border: $color-principal solid 10px ;
+                border-radius: 10px;
+            }
+        }                 
+}

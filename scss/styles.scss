@@ -1,46 +1,53 @@
+@import "variables";
+@import "footer";
+@import "pages/quienessomos";
+
+
 *{
     margin: 0px; /* margen externo */
     padding: 0px; /* margen interno */ 
 }
 
-/* nav bootstrap */
-.nav__page{
-    font-size: 20px;
-}
-
-.nav__page:hover{
-    transform: scale(1.15, 1.15); /* agrandamiento */
-    transition: all 1s;
-}
-
-.nav{
-    display: flex;
-    flex-wrap: wrap;
-    display: inline;
-}
-
-
-
 /* COLOR DE FONDO HEADER NAV */
 .header {
     position: sticky;
     top: 0px;
-    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
+    background-color: $color-principal;
     z-index: 10;
+
+    &__nombre-pag { /* todo piel texto grande en el nav */
+        text-align: center;
+        background-color: $color-principal;
+        padding: 30px;
+    }
 }
 
-/* todo piel texto grande en el nav */
-.header__nombre-pag {
-    text-align: center;
-    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
-    padding: 30px;
+h1{/* titulo de todas las pag todo piel beauty house */
+    font-family: $font-fascinate;
+    color: white;
+    background-color:$color-secundario; 
 }
+
+/* nav bootstrap */
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    display: inline;
+
+    &__page{
+        font-size: 20px;
+        &:hover{
+            transform: scale(1.15, 1.15); /* agrandamiento */
+            transition: all 1s;
+        }
+    }
+}
+
 
 /* color boton search */
 .btn {
-    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
+    background-color:$color-principal;
 }
-
 
 /* main y flex */
 .main{
@@ -49,89 +56,62 @@
     width: 100vw; /* view widht ancho de la pantalla */
 }
 
-h1{
-    font-family: 'Fascinate', cursive;
-    color: white;
-    background-color:rgb(230, 95, 117); 
-}
-
 
 
 
                                                  /* INICIO INDEX */
-
                                 
 /* NOMBRE DE CADA PAGINA */ /* TIPO DE LETRA, COLOR Y FONDO */
 h2{
-    font-family: 'Fascinate', cursive;
+    font-family: $font-fascinate;
     color: white;
-    background-color:rgb(230, 95, 117); 
+    background-color:$color-secundario; 
     padding: 20px;
-}
-
-/* TAMAÑO, COLOR DE MARGEN Y BOX MODEL DE IMAGENES GALERIA */
-.galeria__imagen {
-    background-color: rgb(230, 95, 117); /* ROSA OSCURO */
-    width: 400px; /* ancho */
-    height: 200px; /* alto */
-    margin: 10px; 
-    padding: 10px;
-}
-
-/* COLOR FONDO flex GALERIA */
-.galeria {
-    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
-    display: flex; 
-    /* flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between; */
 }
 
 /* COLOR DE FONDO, flex, TAMAÑO Y TIPO DE LETRA DE PAGINA TEXTO INICIO */
 main p {
-    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
-    font-family: 'Roboto', sans-serif;
+    background-color:$color-principal;
+    font-family: $font-roboto;
     font-size: 25px;
     padding: 0 16px;
     display: flex;
     text-align: center;
     display: flex;
     justify-content: center;
+
+    &__texto {/* CENTRADO BOX MODEL DE TEXTO de galeria */
+        padding: 50px;
+    }
 }
 
-
-/* CENTRADO BOX MODEL DE TEXTO */
-.galeria__texto {
-    padding: 50px;
-}
 
 /* fondo, flex boton */
 .button {
-    background-color:rgb(233, 166, 166);
+    background-color:$color-principal;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &__turno{/* TIPO DE LETRA, BOX MODEL, borde Y COLOR DE FONDO DE BOTON DE TURNO */
+        font-family: $font-fascinate;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        
+        &:hover{/* tranformaciones y transiciones */
+            background-image: radial-gradient(white ,$color-secundario);
+            transform: scale(1.15, 1.15); /* agrandamiento */
+            transition: all 1s;
+        }
+    }
 }
 
-/* TIPO DE LETRA, BOX MODEL, borde Y COLOR DE FONDO DE BOTON DE TURNO */
-.boton__turno{
-    font-family: 'Fascinate', cursive;
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 5px;
-} 
-
-/* tranformaciones y transiciones */
-.boton__turno:hover{
-    background-image: radial-gradient(white ,rgb(230, 95, 117) /* ROSA OSCURO */);
-    transform: scale(1.15, 1.15); /* agrandamiento */
-    transition: all 1s;
-}
 
 /* COLOR DE FONDO flex Y BOX MODEL DE MAPS E INSTAGRAM */
 .redes {
     padding: 30px;
-    background-image: linear-gradient(rgb(233, 166, 166) /* ROSA CLARITO */,rgb(210, 107, 219) /* ROSA LILA */,rgb(230, 95, 117) /* ROSA OSCURO */);
+    background-image: linear-gradient($color-principal,$color-terciario,$color-secundario);
     background-position: center;
     display: flex;
     justify-content: space-around;
@@ -141,172 +121,58 @@ main p {
 
 /* COLOR DE FONDO y grid  y flex DE LOS ITEMS PROPUESTA */
 .items {
-    background-color: rgb(233, 166, 166);
+    background-color: $color-principal;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "propuesta items logo";
     display: flex;
     flex-wrap: wrap;
-}
+    font-size: 25px; /* TAMAÑO DE LETRA DE LOS ITEMS */
 
-.propuesta {
-    grid-column: 1/2;
-    grid-row: 1/2;  
-    margin: 15px;
-}
-
-.items {
-    grid-column: 2/3;
-    grid-row: 1/2;
+    &__propuesta {
+        grid-column: 1/2;
+        grid-row: 1/2;  
+        margin: 15px;
+    }
     
-}
+    &__items {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        
+    }
+    
+    &__logo {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
 
-.logo {
-    grid-column: 3/4;
-    grid-row: 1/2;
-}
+    &__propuesta--letra{/* TIPO DE LETRA, BOX MODEL Y TAMAÑO DE LOS ITEMS DE LA PROPUESTA */
+        font-family: $font-roboto;
+        font-size: 20px;
+        padding: 30px;
+        list-style: square; /* en vez de punto, es cuadrado */
+        display: flex;
+        flex-direction: column;
+    }
 
+    &__logo{ /* ANCHO, COLOR DE MARGEN Y BOX MODEL DEL LOGO PRINCIPAL ABAJO DE LA PROPUESTA */
+        background-color: $color-principal;
+        width: 300px;
+        margin: 20px;
+        padding: 10px;
+    }
+}
 
 /* TIPO DE LETRA, COLOR Y TAMAÑO DEL SUBTITULO DE LA PROPUESTA */
 h3{
-    font-family: 'Fascinate', cursive;
-    color: rgb(230, 95, 117);
+    font-family: $font-fascinate;
+    color: $color-secundario;
     font-size: 30px;
-    background-color: rgb(233, 166, 166);
+    background-color: $color-principal;
     display: flex;
     justify-content: flex-start;
 } 
-
-/* TIPO DE LETRA, BOX MODEL Y TAMAÑO DE LOS ITEMS DE LA PROPUESTA */
-.items__propuesta--letra{
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    padding: 30px;
-    list-style: square; /* en vez de punto, es cuadrado */
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* TAMAÑO DE LETRA DE LOS ITEMS */
-.article {
-    font-size: 25px;
-}
-
-/* ANCHO, COLOR DE MARGEN Y BOX MODEL DEL LOGO PRINCIPAL ABAJO DE LA PROPUESTA */
-.items__logo{
-    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
-    width: 300px;
-    margin: 20px;
-    padding: 10px;
-}
-
-
-
-
-
-
-
-
-                                           /* QUIENES SOMOS */
-/* fondo de seccion */
-main {
-    background-color: rgb(233, 166, 166); /* ROSA CLARITO */
-}
-
-/* letra, box model, borde fondo de parrafo */
-.somos__texto {
-    font-family: 'Roboto', sans-serif; 
-    font-size: 30px;
-    padding: 20px;
-    margin: 30px;
-    text-align: center;
-    background-color: rgb(230, 95, 117); /* ROSA OSCURO */
-    list-style: none; /* saca puntos a los items */
-    border: white solid 10px;
-    border-radius: 10px;
-}
- /* tipo de letra fondo color y borde del subtitulo de las marcas */
-.subtitulo__marcas{
-    font-family: 'Fascinate', cursive;
-    font-size: 30px;
-    color:  rgb(230, 95, 117); /* ROSA OSCURO */
-    padding: 30px;
-    text-align: center;
-    border: rgb(230, 95, 117) solid 10px;
-    border-radius: 10px;
-}
-
-/* tranformaciones y transiciones */
-.subtitulo__marcas:hover{
-    background-image: radial-gradient(white ,rgb(230, 95, 117) /* ROSA OSCURO */);
-    transform: rotate(10deg); /* rotacion */
-    transition: all 2s;
-}
-
- /* grid en galeria */
-.img{
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "lidherma idraet exel"
-                         "lidherma carthage exel"
-                         "laca carthage zine";
-}
-
-.lidherma {
-    background-image: url("../resources/lidherma.jpg");
-    grid-area: lidherma;
-    background-size: contain;
-    background-position: center;
-}
-
-.idraet {
-    background-image: url("../resources/idraet dermopuriti.png");
-    grid-area: idraet;
-    background-size: cover;
-    background-position: center;
-}
-
-.exel {
-    background-image: url("../resources/exel.png");
-    grid-area: exel;
-    background-size: cover;
-    background-position: center;
-}
-
-.carthage {
-    background-image: url("../resources/carthage.png");
-    grid-area: carthage;
-    background-size: cover;
-    background-position: center;
-}
-
-.laca {
-    background-image: url("../resources/laca.png");
-    grid-area: laca;
-    background-size: cover;
-    background-position: center;
-}
-.zine {
-    background-image: url("../resources/zine.jpg");
-    grid-area: zine;
-    background-size: cover;
-    background-position: center;
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -319,82 +185,74 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "imagen titulo"
-                         "imagen boton"
+                         "imagen boton";
+
+        &__imagen{/* tamaño d imagenes */
+            width: 300px;
+            height: 200px;
+            border: $color-secundario solid 7px ;
+            object-fit: cover;
+            object-position: center;
+            margin: 12px;
+        }
+
+        &__titulo{/* titulo de servicio */
+            font-family: $font-fascinate;
+            font-size: 20px;
+            text-decoration: overline;
+            margin: 30px;
+        }
+
+        &__boton{/* boton */
+            border: $color-secundario solid 5px ;
+            border-radius: 15px;
+            font-size: 20px;
+            margin: 30px;
+
+            &:hover{/* tranformaciones y transiciones */
+                background-image: radial-gradient(white ,$color-secundario);
+                transform: scale(1.15, 1.15);
+                transition: all 3s;
+            }
+         }
+
+                         &__img-seccion{
+                            background-color: rgba(214, 127, 140, 0.641);
+                            border: $color-terciario solid 5px ;
+                            border-radius: 15px;
+                            margin: 40px;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: 1fr 1fr;
+                            grid-template-areas: "imagen titulo"
+                                                 "imagen boton";  
+
+                                                 &:hover{/* tranformaciones y transiciones */
+                                                    transform: scale(1.05, 1.05);
+                                                    transition: all 2s;
+                                                } 
+                                                
+                                                .imagen{
+                                                    grid-area: imagen;
+                                                    grid-column: 1/1;
+                                                    grid-row: 1/3;
+                                                }
+                                                
+                                                .titulo {
+                                                    grid-area: titulo;
+                                                    grid-column: 2/3;
+                                                    grid-row: 1/1;
+                                                    text-align: center;
+                                                }
+                                                
+                                                .boton{
+                                                    grid-area: boton;
+                                                    grid-column: 2/3;
+                                                    grid-row: 2/3;
+                                                }
+                                                
+                        }
 }
-
-.imagen{
-    grid-area: imagen;
-    grid-column: 1/1;
-    grid-row: 1/3;
-}
-
-.titulo {
-    grid-area: titulo;
-    grid-column: 2/3;
-    grid-row: 1/1;
-    text-align: center;
-}
-
-.boton{
-    grid-area: boton;
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-
-.servicios__img-seccion{
-    background-color: rgba(214, 127, 140, 0.641);
-    border: rgb(210, 107, 219) /* ROSA LILA */ solid 5px ;
-    border-radius: 15px;
-    margin: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "imagen titulo"
-                         "imagen boton"
-}
-
-/* tranformaciones y transiciones */
-.servicios__img-seccion:hover{
-    transform: scale(1.05, 1.05);
-    transition: all 2s;
-}
-
-/* tamaño d imagenes */
-.servicios__imagen{
-    width: 300px;
-    height: 200px;
-    border: rgb(230, 95, 117) /* ROSA OSCURO */ solid 7px ;
-    object-fit: cover;
-    object-position: center;
-    margin: 12px;
-}
-
-/* titulo de servicio */
-.servicios__titulo{
-    font-family: 'Fascinate', cursive;
-    font-size: 20px;
-    text-decoration: overline;
-    margin: 30px;
-}
-
-/* boton */
-.servicios__boton{
-   border: rgb(230, 95, 117) /* ROSA LILA */ solid 5px ;
-   border-radius: 15px;
-   font-size: 20px;
-   margin: 30px;
-}
-
-/* tranformaciones y transiciones */
-.servicios__boton:hover{
-    background-image: radial-gradient(white ,rgb(230, 95, 117) /* ROSA OSCURO */);
-    transform: scale(1.15, 1.15);
-    transition: all 3s;
-}
-
-
-
-
 
 
 
@@ -416,18 +274,17 @@ main {
     grid-template-columns: 1 fr 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin: 20px;
-}
 
-/* flex texto principal */
-.principal__texto {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    font-size: 50px;
-    text-shadow: 2px 2px 7px black;
-    color: white;
+    &__texto {/* flex texto principal */
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-size: 50px;
+        text-shadow: 2px 2px 7px black;
+        color: white;
+    }
 }
 
 
@@ -440,122 +297,98 @@ main {
                         "cuatro cinco seis";
    gap: 20px; /* espacio entre las tarjetas */   
    padding: 40px;
-}
 
-.uno {
+   .uno {
     grid-column: 1/2;
     grid-row: 1/2;
-}
 
-/* tranformaciones y transiciones */
-.uno:hover{
-    transform: rotate(10deg);
-    transition: all 1s;
+    &:hover{/* tranformaciones y transiciones */
+        transform: rotate(10deg);
+        transition: all 1s;
+    }
 }
 
 .dos{
     grid-column: 2/3;
     grid-row: 1/2;
-}
 
-/* tranformaciones y transiciones */
-.dos:hover{
-    transform: rotate(-10deg);
-    transition: all 1s;
+    &:hover{/* tranformaciones y transiciones */
+        transform: rotate(-10deg);
+        transition: all 1s;
+    }
 }
 
 .tres{
     grid-column: 3/4;
     grid-row: 1/2;
-}
 
-/* tranformaciones y transiciones */
-.tres:hover{
-    transform: rotate(10deg);
-    transition: all 1s;
+    &:hover{/* tranformaciones y transiciones */
+        transform: rotate(10deg);
+        transition: all 1s;
+    }
 }
 
 .cuatro{
     grid-column: 1/2;
     grid-row: 2/3;
-}
 
-/* tranformaciones y transiciones */
-.cuatro:hover{
-    transform: rotate(-10deg);
-    transition: all 1s;
+    &:hover{/* tranformaciones y transiciones */
+        transform: rotate(-10deg);
+        transition: all 1s;
+    }
 }
 
 .cinco{
     grid-column: 2/3;
     grid-row: 2/3;
-}
 
-/* tranformaciones y transiciones */
-.cinco:hover{
-    transform: rotate(10deg);
-    transition: all 1s;
+    &:hover{/* tranformaciones y transiciones */
+        transform: rotate(10deg);
+        transition: all 1s;
+    }
 }
 
 .seis{
     grid-column: 3/4;
     grid-row: 2/3;
+
+    &:hover{/* tranformaciones y transiciones */
+        transform: rotate(-10deg);
+        transition: all 1s;
+    }
+}
 }
 
-/* tranformaciones y transiciones */
-.seis:hover{
-    transform: rotate(-10deg);
-    transition: all 1s;
+.card {
+    &titulo{
+        text-align: center;
+        font-size: 30px;
+        font-family: $font-fascinate;
+    }
+
+    &__button {/* boton cards */
+        border: $color-terciario solid 2px ;
+        border-radius: 15px;
+        color: black;
+        padding: 10px;
+        margin: 10px;
+        align-items: center;
+
+        &:hover{/* tranformaciones y transiciones */
+            background-image: radial-gradient(white ,$color-secundario);
+            transform: scale(1.15, 1.15);
+            transition: all 1s;
+        }
+     }
 }
 
-/* tarjetas grid y flex */
-.card__promo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: rgb(210, 107, 219) solid 2px ;
-    border-radius: 10px;
-    padding: 5px;
-    align-items: center;
-}
-
-/* tamaño img cards */
-.card__imagen {
-    width: 300px;
-    height: 200px;
-}
-
-.card__titulo{
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Fascinate', cursive;
-}
 
 /* texto card */
 p .card__texto {
     text-align: center;
     font-size: 20px;
-    background-color: rgb(230, 95, 117);
+    background-color:$color-secundario;
 }
-
-
-/* boton cards */
-.card__button {
-   border: rgb(210, 107, 219) /* ROSA LILA */ solid 2px ;
-   border-radius: 15px;
-   color: black;
-   padding: 10px;
-   margin: 10px;
-   align-items: center;
-}
-
-/* tranformaciones y transiciones */
-.card__button:hover{
-    background-image: radial-gradient(white ,rgb(230, 95, 117) /* ROSA OSCURO */);
-    transform: scale(1.15, 1.15);
-    transition: all 1s;
-}
-
 
 
 
@@ -566,571 +399,83 @@ p .card__texto {
 
 /* COLOR DE FONDO Y BOX MODEL */
 .form {
-    background-image: linear-gradient(rgb(233, 166, 166) /* ROSA CLARITO */,rgb(210, 107, 219) /* ROSA LILA */,rgb(230, 95, 117) /* ROSA OSCURO */);
+    background-image: linear-gradient($color-principal,$color-terciario,$color-secundario);
+
+    &__nombre {
+        padding: 10px;
+        font-size: 25px;
+    }
+
+    &__email {
+        padding: 10px; 
+        font-size: 25px;
+    }
+
+    &__textarea {
+        padding: 10px;
+        font-size: 25px;
+    }
+
+    &__botones {/* fondo, margin y padding botones de enviar y borrar */
+        padding: 10px;
+        margin: 10px;
+        font-size: 20px;
+
+        &:hover{/* tranformaciones y transiciones */
+            background-image: radial-gradient(white ,$color-secundario);
+            transform: scale(1.15, 1.15);
+            transition: all 1s;
+        }
+    }
 }
 
 .mb-3{
     margin: 20px;
 }
 
-.form__nombre {
-    padding: 10px;
-}
-
-.form__email {
-    padding: 10px; 
-}
-
-.form__textarea {
-    padding: 10px;
-}
-/* fondo, margin y padding botones de enviar y borrar */
-.form__botones {
-    padding: 10px;
-    margin: 10px;
-}
-
 .botones{
     margin: 40px;
 }
 
-/* tranformaciones y transiciones */
-.form__botones:hover{
-    background-image: radial-gradient(white ,rgb(230, 95, 117) /* ROSA OSCURO */);
-    transform: scale(1.15, 1.15);
-    transition: all 1s;
-}
 
-.form__nombre {
-    font-size: 25px;
-}
-
-.form__email {
-    font-size: 25px;
-}
-
-.form__textarea{
-    font-size: 25px;
-}
-
-.form__botones{
-    font-size: 20px;
-}
 
 /* flex maps*/
 .maps {
-    background-color: rgb(233, 166, 166);
+    background-color: $color-principal;
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
 
-.maps__img{
-    width: 500px;
-    height: 400px;
-}
-
-.maps__logo{
-    width: 500px;
-    height: 400px;
-}
-
- /* box model de link de maps */
-.maps__link{
-    padding: 15px;
-    margin:20px;
-    border: rgb(210, 107, 219) solid 10px;
-    border-radius: 15px;
-}
-/* box model de imagen logo */
-.maps__imagenlogo{
-    padding: 15px;
-    margin:20px;
-    border: rgb(210, 107, 219) solid 10px;
-    border-radius: 15px;
-}
-
-
-
-
-
-                                             /* FOOTER */
-/* foooter grid */
-footer {
-    background-image: linear-gradient(rgb(230, 95, 117), rgb(233, 166, 166) /* ROSA CLARITO */); 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "subtituloinfo subtituloseguimos none"
-                         "info redeslogo derechos";
-}
-
-.subtituloinfo {
-    grid-area: subtituloinfo;
-    margin: 15px;
-    padding: 10px;
-}
-
-.subtituloseguinos {
-    grid-area: subtituloseguinos;
-    margin: 15px;
-    padding: 10px;
-}
-
-
-.info {
-    grid-area: info;
-    margin: 15px;
-    font-size: 25px;
-}
-
-.redeslogo {
-    grid-area: redeslogo;
-}
-
-.derechos {
-    grid-area: derechos;
-    margin: 15px;
-    padding: auto;
-} 
-
-
-
-/* TIPO DE LETRA Y TAMAÑO DE SEGUINOS EN REDES */
-.footer__redes {
-    font-size: 20px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif; 
-    justify-content: center;
-    align-items: center;
-}
-
- /* texto subtitulos */
-.footer__texto {
-    font-family: 'Fascinate', cursive;
-    color: white;
-    font-size: 30px;
-}
-
-
-/* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
-.footer__imagen{
-    width: 200px;
-    padding: 15px;
-    margin: 10px;
-    border: rgb(233, 166, 166) solid 10px ;
-    border-radius: 10px;
-}
-
-
-
-
-                                 /* MEDIA QUERIE */
-                
-
-/* media de celular */
-/* 99.9% siempre debe haber una sola columna */
-/* 0,1% son galerias cuadriculadas que pueden tener hasta 3 columnas */
-@media (min-width: 320px) and (max-width: 575px) {
-    
-    /* index TAMAÑO IMAGENES GALERIA */
-   .galeria__imagen {
-    width: 280px; /* ancho */
-    }  
-
-    /* index ANCHO DEL LOGO PRINCIPAL ABAJO DE LA PROPUESTA */
-    .items__logo{
-    width: 200px;
+    &__img{
+        width: 500px;
+        height: 400px;
     }
 
-    /* quienes somos logos de marcas */
-    .img{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: "lidherma" 
-                             "idraet"
-                             "exel"
-                             "carthage"
-                             "laca"
-                             "zine";
-    }
-    
-    .lidherma {
-        background-image: url("../resources/lidherma.jpg");
-        grid-area: lidherma;
-        grid-column: 1/1;
-        grid-row: auto;
-        background-size: cover;
-        background-position: center;
-    }
-    
-    .idraet {
-        background-image: url("../resources/idraet dermopuriti.png");
-        grid-area: idraet;
-        grid-column: 1/1;
-        grid-row: auto;
-        background-size: cover;
-        background-position: center;
-    }
-    
-    .exel {
-        background-image: url("../resources/exel.png");
-        grid-area: exel;
-        grid-column: 1/1;
-        grid-row: auto;
-        background-size: cover;
-        background-position: center;
-    }
-    
-    .carthage {
-        background-image: url("../resources/carthage.png");
-        grid-area: carthage;
-        grid-column: 1/1;
-        grid-row: auto;
-        background-size: cover;
-        background-position: center;
-    }
-    
-    .laca {
-        background-image: url("../resources/laca.png");
-        grid-area: laca;
-        grid-column: 1/1;
-        grid-row: auto;
-        background-size: cover;
-        background-position: center;
-    }
-    .zine {
-        background-image: url("../resources/zine.jpg");
-        grid-area: zine;
-        grid-column: 1/1;
-        grid-row:auto;
-        background-size: cover;
-        background-position: center;
+    &__logo{
+        width: 500px;
+        height: 400px;
     }
 
-
-    /* servicios tarjetas */
-    .servicios{
-        display: flex;
-        flex-direction: column;
-    }
-     
-    .servicios__imagen{
-        width: 100px;
-        height: 100px;
-        border: rgb(230, 95, 117) /* ROSA OSCURO */ solid 10px ;
-    }
-    
-    .servicios__titulo{
-        font-family: 'Fascinate', cursive;
-        font-size: 15px;
-        text-decoration: overline;
-        display: flex;
-        text-align: center;
-    }
-    
-    .servicios__boton{
-       background-image: linear-gradient(rgb(233, 166, 166) /* ROSA CLARITO */,rgb(230, 95, 117) /* ROSA OSCURO */);
-       border: rgb(230, 95, 117) /* ROSA LILA */ solid 5px ;
-       border-radius: 5px;
-       padding: 5px; 
-       font-size: 10px;
-       margin: 5px;
-       width: 100px;
-       height: 50px;
-    }
-    
-
-
-    /* promos tarjetas */
-
-    .card__seccion{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "uno"
-                             "dos"
-                             "tres"
-                             "cuatro" 
-                             "cinco" 
-                             "seis";  
-     }
-     
-     .uno {
-         grid-column: 1/2;
-         grid-row: 1/2;
-     }
-     
-     .dos{
-         grid-column: 1/2;
-         grid-row: 2/3;
-     }
-     
-     .tres{
-         grid-column: 1/2;
-         grid-row: 3/4;
-     }
-     
-     .cuatro{
-         grid-column: 1/2;
-         grid-row: 4/5;
-     }
-     
-     .cinco{
-         grid-column: 1/2;
-         grid-row: 5/6;
-     }
-     
-     .seis{
-         grid-column: 1/2;
-         grid-row: 6/7;
-     }
-
-     .card__imagen {
-        width: 100px;
-        height: 100px;
-    }  
-
-/* cotactanos */
-    .maps {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .maps__img{
-        width: 200px;
-        height: 200px;
-    }
-
-    .maps__logo{
-        width: 200px;
-        height: 200px;
-    }
-    
-
-    /* footer*/
-
-     .footer__texto {
-    text-align: center;
-    }
-
-    footer {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "subtituloinfo"
-                            "subtituloseguimos"
-                            "none"
-                            "info"
-                            "redeslogo" 
-                            "derechos";
-    }
-    
-    .subtituloinfo {
-        grid-area: subtituloinfo;
-    }
-    
-    .subtituloseguinos {
-        grid-area: subtituloseguinos;
-    }
-    
-    .info {
-        grid-area: info;
-    }
-    
-    .redeslogo {
-        grid-area: redeslogo;
-    }
-    
-    .derechos {
-        grid-area: derechos;
-    }
-
-    .footer__imagen{
-        width: 100px;
+    &__link{/* box model de link de maps */
         padding: 15px;
-        margin: 10px;
-        border: rgb(233, 166, 166) solid 10px ;
-        border-radius: 10px;
+        margin:20px;
+        border: $color-terciario solid 10px;
+        border-radius: 15px;
     }
-    
+
+    &__imagenlogo{/* box model de imagen logo */
+        padding: 15px;
+        margin:20px;
+        border: $color-terciario solid 10px;
+        border-radius: 15px;
+    }
 }
 
-/* media querie de tablet */
-@media (min-width: 576px) and (max-width: 992px) { 
-    
+@import "mediaqueries";
 
-    /* quienes somos logos de marcas */
-    .img{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: "lidherma" 
-                             "idraet"
-                             "exel"
-                             "carthage"
-                             "laca"
-                             "zine";
-    }
-    
-    .lidherma {
-        background-image: url("../resources/lidherma.jpg");
-        grid-area: lidherma;
-        grid-column: 1/1;
-        grid-row: auto;
-        background-size: cover;
-        background-position: center;
-    }
-    
-    .idraet {
-        background-image: url("../resources/idraet dermopuriti.png");
-        grid-area: idraet;
-        grid-column: 1/1;
-        grid-row: auto;
-        background-size: cover;
-        background-position: center;
-    }
-    
-    .exel {
-        background-image: url("../resources/exel.png");
-        grid-area: exel;
-        grid-column: 1/1;
-        grid-row: auto;
-        background-size: cover;
-        background-position: center;
-    }
-    
-    .carthage {
-        background-image: url("../resources/carthage.png");
-        grid-area: carthage;
-        grid-column: 1/1;
-        grid-row: auto;
-        background-size: cover;
-        background-position: center;
-    }
-    
-    .laca {
-        background-image: url("../resources/laca.png");
-        grid-area: laca;
-        grid-column: 1/1;
-        grid-row: auto;
-        background-size: cover;
-        background-position: center;
-    }
-    .zine {
-        background-image: url("../resources/zine.jpg");
-        grid-area: zine;
-        grid-column: 1/1;
-        grid-row:auto;
-        background-size: cover;
-        background-position: center;
-    }
 
-    /* servicios tarjetas */
-    .servicios{
-        display: flex;
-        flex-direction: column;
-    }
 
-    /* promos tarjetas */
-    .card__seccion{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: "uno dos"
-                             "tres cuatro" 
-                             "cinco seis";  
-     }
-     
-     .uno {
-         grid-column: 1/2;
-         grid-row: 1/2;
-     }
-     
-     .dos{
-         grid-column: 2/3;
-         grid-row: 1/2;
-     }
-     
-     .tres{
-         grid-column: 1/2;
-         grid-row: 2/3;
-     }
-     
-     .cuatro{
-         grid-column: 2/3;
-         grid-row: 2/3;
-     }
-     
-     .cinco{
-         grid-column: 1/2;
-         grid-row: 3/4;
-     }
-     
-     .seis{
-         grid-column: 2/3;
-         grid-row: 3/4;
-     }
 
-     .card__imagen {
-        width: 200px;
-        height: 200px;
-    }  
-    
 
-    /* cotactanos */
-    .maps {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .maps__img{
-        width: 400px;
-        height: 400px;
-    }
 
-    .maps__logo{
-        width: 400px;
-        height: 400px;
-    }
-
-    /* footer*/
-    .footer__texto {
-        text-align: center;
-        }
-    
-        footer {
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-            grid-template-areas: "subtituloinfo"
-                                "subtituloseguimos"
-                                "none"
-                                "info"
-                                "redeslogo" 
-                                "derechos";
-        }
-        
-        .subtituloinfo {
-            grid-area: subtituloinfo;
-        }
-        
-        .subtituloseguinos {
-            grid-area: subtituloseguinos;
-        }
-        
-        .info {
-            grid-area: info;
-        }
-        
-        .redeslogo {
-            grid-area: redeslogo;
-        }
-        
-        .derechos {
-            grid-area: derechos;
-        }
-    
-        .footer__imagen{
-            width: 300px;
-            padding: 15px;
-            margin: 10px;
-            border: rgb(233, 166, 166) solid 10px ;
-            border-radius: 10px;
-        }
-}
+                                 
