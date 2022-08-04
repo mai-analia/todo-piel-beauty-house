@@ -6,3 +6,8 @@ $color-terciario:rgb(210, 107, 219); /* ROSA LILA */
 /* font */
 $font-fascinate: 'Fascinate';
 $font-roboto: 'Roboto';
+
+/* tamaño letra */
+$contenido: 1rem; /* REM EM = 1REM: 16px */ /* REM  toma de ref la letra M, y EM toma de ref la X. FULL RESPONSIVE */
+$titulo: $contenido * 2;
+

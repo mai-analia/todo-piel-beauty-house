@@ -26,7 +26,7 @@ main {
     border-radius: 10px;
 
     &:hover{/* tranformaciones y transiciones */
-        transform: rotate(10deg); /* rotacion */
+        transform: scale(1, 1.15); /* zoom */
         transition: all 2s;
     }
 }
@@ -46,43 +46,37 @@ main {
                          .lidherma {
                             background-image: url("../resources/lidherma.jpg");
                             grid-area: lidherma;
-                            background-size: contain;
-                            background-position: center;
+                            @extend .quienessomos-img;
                         }
                         
                         .idraet {
                             background-image: url("../resources/idraet dermopuriti.png");
                             grid-area: idraet;
-                            background-size: cover;
-                            background-position: center;
+                            @extend .quienessomos-img;
                         }
                         
                         .exel {
                             background-image: url("../resources/exel.png");
                             grid-area: exel;
-                            background-size: cover;
-                            background-position: center;
+                            @extend .quienessomos-img;
                         }
                         
                         .carthage {
                             background-image: url("../resources/carthage.png");
                             grid-area: carthage;
-                            background-size: cover;
-                            background-position: center;
+                            @extend .quienessomos-img;
                         }
                         
                         .laca {
                             background-image: url("../resources/laca.png");
                             grid-area: laca;
-                            background-size: cover;
-                            background-position: center;
+                            @extend .quienessomos-img;
                         }
 
                         .zine {
                             background-image: url("../resources/zine.jpg");
                             grid-area: zine;
-                            background-size: cover;
-                            background-position: center;
+                            @extend .quienessomos-img;
                         }
                         
 }

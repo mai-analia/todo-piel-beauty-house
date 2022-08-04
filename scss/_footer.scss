@@ -1,53 +1,49 @@
                                      /* FOOTER */
 footer {/* foooter grid */
-    background-image: linear-gradient($color-secundario, $color-principal); 
+    background-color: rgba(177, 27, 77, 0.733);
+   /*  background-image: linear-gradient($color-secundario, $color-principal); */ 
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "subtituloinfo subtituloseguimos none"
-                         "info redeslogo derechos";
+    grid-template-areas: "navegacion mapa info seguinos"
+                         "derechos derechos derechos derechos";
 
-                         .subtituloinfo {
-                            grid-area: subtituloinfo;
-                            margin: 15px;
-                            padding: 10px;
-                        }
-                        
-                        .subtituloseguinos {
-                            grid-area: subtituloseguinos;
-                            margin: 15px;
-                            padding: 10px;
-                        }
-                        
-                        
-                        .info {
+                         .navegacion{
+                            grid-area: navegacion;
+                         }
+
+                         .mapa{
+                            grid-area: mapa;
+                         }
+
+                         .info{
                             grid-area: info;
-                            margin: 15px;
-                            font-size: 25px;
-                        }
-                        
-                        .redeslogo {
-                            grid-area: redeslogo;
-                        }
-                        
-                        .derechos {
+                         }
+
+                         .seguinos{
+                            grid-area: seguinos;
+                         }
+
+                         .derechos{
                             grid-area: derechos;
-                            margin: 15px;
-                            padding: auto;
-                        } 
+                            display: grid;
+                         }
 
         .footer{
-            &__redes {/* TIPO DE LETRA Y TAMAÑO DE SEGUINOS EN REDES */
+            &__texto-nav{
                 font-size: 20px;
-                text-align: center;
-                font-family: $font-roboto; 
-                justify-content: center;
-                align-items: center;
+                color: rgb(75, 72, 72);
+                text-decoration-color: rgb(228, 208, 208);
             }
 
-            &__texto {/* texto subtitulos */
-                font-family: $font-fascinate;
-                color: white;
-                font-size: 30px;
+            &__texto {
+                font-size: 15px;
+                margin: 10px;
+            }
+
+            &__texto-derechos{
+                font-size: 15px;
+                color: black;
             }
 
             &__imagen{/* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
@@ -59,3 +55,28 @@ footer {/* foooter grid */
             }
         }                 
 }
+
+h4 {
+    font-family: $font-fascinate;
+    color: white;
+    font-size: 30px;
+}
+
+.maps {
+    margin: 30px;
+    display: grid;
+    justify-content: baseline;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+}
+
+.mail{
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    color: aqua;
+}
+
+

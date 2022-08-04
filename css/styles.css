@@ -4,43 +4,39 @@
 /* ROSA OSCURO */
 /* ROSA LILA */
 /* font */
+/* tamaño letra */
+/* REM EM = 1REM: 16px */
+/* REM  toma de ref la letra M, y EM toma de ref la X. FULL RESPONSIVE */
 /* FOOTER */
 footer {
   /* foooter grid */
-  background-image: linear-gradient(#e65f75, #e9a6a6);
+  background-color: rgba(177, 27, 77, 0.733);
+  /*  background-image: linear-gradient($color-secundario, $color-principal); */
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "subtituloinfo subtituloseguimos none" "info redeslogo derechos"; }
-  footer .subtituloinfo {
-    grid-area: subtituloinfo;
-    margin: 15px;
-    padding: 10px; }
-  footer .subtituloseguinos {
-    grid-area: subtituloseguinos;
-    margin: 15px;
-    padding: 10px; }
+  grid-template-areas: "navegacion mapa info seguinos" "derechos derechos derechos derechos"; }
+  footer .navegacion {
+    grid-area: navegacion; }
+  footer .mapa {
+    grid-area: mapa; }
   footer .info {
-    grid-area: info;
-    margin: 15px;
-    font-size: 25px; }
-  footer .redeslogo {
-    grid-area: redeslogo; }
+    grid-area: info; }
+  footer .seguinos {
+    grid-area: seguinos; }
   footer .derechos {
     grid-area: derechos;
-    margin: 15px;
-    padding: auto; }
-  footer .footer__redes {
-    /* TIPO DE LETRA Y TAMAÑO DE SEGUINOS EN REDES */
+    display: grid; }
+  footer .footer__texto-nav {
     font-size: 20px;
-    text-align: center;
-    font-family: "Roboto";
-    justify-content: center;
-    align-items: center; }
+    color: #4b4848;
+    text-decoration-color: #e4d0d0; }
   footer .footer__texto {
-    /* texto subtitulos */
-    font-family: "Fascinate";
-    color: white;
-    font-size: 30px; }
+    font-size: 15px;
+    margin: 10px; }
+  footer .footer__texto-derechos {
+    font-size: 15px;
+    color: black; }
   footer .footer__imagen {
     /* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
     width: 200px;
@@ -48,6 +44,47 @@ footer {
     margin: 10px;
     border: #e9a6a6 solid 10px;
     border-radius: 10px; }
+
+h4 {
+  font-family: "Fascinate";
+  color: white;
+  font-size: 30px; }
+
+.maps {
+  margin: 30px;
+  display: grid;
+  justify-content: baseline; }
+
+ul {
+  list-style: none;
+  padding: 0px; }
+
+.mail {
+  text-decoration: underline;
+  text-decoration-color: aqua;
+  color: aqua; }
+
+/* condicional IF */
+/* codigo que se ejecuta */
+/* maps */
+/* EXTEND - extender codigo: clases base que sean iguales */
+.boxmodelyborder-contactanos, .maps__link, .maps__imagenlogo {
+  padding: 15px;
+  margin: 20px;
+  border: #d26bdb solid 10px;
+  border-radius: 15px; }
+
+.size-img, .maps__img, .maps__logo {
+  width: 500px;
+  height: 400px; }
+
+.form, .form__nombre, .form__email, .form__textarea {
+  padding: 10px;
+  font-size: 25px; }
+
+.quienessomos-img, .img .lidherma, .img .idraet, .img .exel, .img .carthage, .img .laca, .img .zine {
+  background-size: cover;
+  background-position: center; }
 
 /* fondo de seccion */
 main {
@@ -76,8 +113,8 @@ main {
   border-radius: 10px; }
   .subtitulo__marcas:hover {
     /* tranformaciones y transiciones */
-    transform: rotate(10deg);
-    /* rotacion */
+    transform: scale(1, 1.15);
+    /* zoom */
     transition: all 2s; }
 
 /* grid en galeria */
@@ -90,34 +127,22 @@ main {
   grid-template-areas: "lidherma idraet exel" "lidherma carthage exel" "laca carthage zine"; }
   .img .lidherma {
     background-image: url("../resources/lidherma.jpg");
-    grid-area: lidherma;
-    background-size: contain;
-    background-position: center; }
+    grid-area: lidherma; }
   .img .idraet {
     background-image: url("../resources/idraet dermopuriti.png");
-    grid-area: idraet;
-    background-size: cover;
-    background-position: center; }
+    grid-area: idraet; }
   .img .exel {
     background-image: url("../resources/exel.png");
-    grid-area: exel;
-    background-size: cover;
-    background-position: center; }
+    grid-area: exel; }
   .img .carthage {
     background-image: url("../resources/carthage.png");
-    grid-area: carthage;
-    background-size: cover;
-    background-position: center; }
+    grid-area: carthage; }
   .img .laca {
     background-image: url("../resources/laca.png");
-    grid-area: laca;
-    background-size: cover;
-    background-position: center; }
+    grid-area: laca; }
   .img .zine {
     background-image: url("../resources/zine.jpg");
-    grid-area: zine;
-    background-size: cover;
-    background-position: center; }
+    grid-area: zine; }
 
 * {
   margin: 0px;
@@ -183,7 +208,6 @@ main p {
   padding: 0 16px;
   display: flex;
   text-align: center;
-  display: flex;
   justify-content: center; }
   main p__texto {
     /* CENTRADO BOX MODEL DE TEXTO de galeria */
@@ -426,17 +450,8 @@ p .card__texto {
 
 /* CONTACTANOS */
 /* COLOR DE FONDO Y BOX MODEL */
-.form {
+.form, .form__nombre, .form__email, .form__textarea {
   background-image: linear-gradient(#e9a6a6, #d26bdb, #e65f75); }
-  .form__nombre {
-    padding: 10px;
-    font-size: 25px; }
-  .form__email {
-    padding: 10px;
-    font-size: 25px; }
-  .form__textarea {
-    padding: 10px;
-    font-size: 25px; }
   .form__botones {
     /* fondo, margin y padding botones de enviar y borrar */
     padding: 10px;
@@ -460,24 +475,10 @@ p .card__texto {
   display: flex;
   justify-content: space-around;
   align-items: center; }
-  .maps__img {
-    width: 500px;
-    height: 400px; }
-  .maps__logo {
-    width: 500px;
-    height: 400px; }
   .maps__link {
-    /* box model de link de maps */
-    padding: 15px;
-    margin: 20px;
-    border: #d26bdb solid 10px;
-    border-radius: 15px; }
+    /* box model de link de maps */ }
   .maps__imagenlogo {
-    /* box model de imagen logo */
-    padding: 15px;
-    margin: 20px;
-    border: #d26bdb solid 10px;
-    border-radius: 15px; }
+    /* box model de imagen logo */ }
 
 /* MEDIA QUERIE */
 /* media de celular */
@@ -601,29 +602,55 @@ p .card__texto {
     .maps__logo {
       width: 200px;
       height: 200px; }
-  /* footer*/
+  /* FOOTER */
   footer {
+    /* foooter grid */
+    background-color: rgba(177, 27, 77, 0.733);
+    /*  background-image: linear-gradient($color-secundario, $color-principal); */
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "subtituloinfo" "subtituloseguimos" "none" "info" "redeslogo"  "derechos"; }
-    footer .subtituloinfo {
-      grid-area: subtituloinfo; }
-    footer .subtituloseguinos {
-      grid-area: subtituloseguinos; }
+    grid-template-areas: "navegacion" "mapa"  "info" "seguinos" "derechos"; }
+    footer .navegacion {
+      grid-area: navegacion; }
+    footer .mapa {
+      grid-area: mapa; }
     footer .info {
       grid-area: info; }
-    footer .redeslogo {
-      grid-area: redeslogo; }
+    footer .seguinos {
+      grid-area: seguinos; }
     footer .derechos {
-      grid-area: derechos; }
-    footer .footer__imagen {
-      width: 100px;
-      padding: 15px;
+      grid-area: derechos;
+      display: grid; }
+    footer .footer__texto-nav {
+      font-size: 20px;
+      color: #4b4848;
+      text-decoration-color: #e4d0d0;
+      display: grid;
+      text-align: center; }
+    footer .footer__texto {
+      font-size: 15px;
       margin: 10px;
+      display: grid;
+      text-align: center; }
+    footer .footer__texto-derechos {
+      font-size: 15px;
+      color: black; }
+    footer .footer__imagen {
+      /* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
+      width: 200px;
+      padding: 15px;
+      margin: 60px;
       border: #e9a6a6 solid 10px;
       border-radius: 10px; }
-    footer .footer__texto {
-      text-align: center; } }
+    footer .maps {
+      margin: 60px;
+      height: 200px;
+      width: 200px; }
+    footer h4 {
+      display: grid;
+      text-align: center;
+      padding: 30px; } }
 
 /* media querie de tablet */
 @media (min-width: 576px) and (max-width: 992px) {
@@ -737,26 +764,53 @@ p .card__texto {
     .maps__logo {
       width: 400px;
       height: 400px; }
-  /* footer*/
+  /* FOOTER */
   footer {
+    /* foooter grid */
+    background-color: rgba(177, 27, 77, 0.733);
+    /*  background-image: linear-gradient($color-secundario, $color-principal); */
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "subtituloinfo" "subtituloseguimos" "none" "info" "redeslogo"  "derechos"; }
-    footer .subtituloinfo {
-      grid-area: subtituloinfo; }
-    footer .subtituloseguinos {
-      grid-area: subtituloseguinos; }
+    grid-template-areas: "navegacion" "mapa"  "info" "seguinos" "derechos"; }
+    footer .navegacion {
+      grid-area: navegacion; }
+    footer .mapa {
+      grid-area: mapa; }
     footer .info {
       grid-area: info; }
-    footer .redeslogo {
-      grid-area: redeslogo; }
+    footer .seguinos {
+      grid-area: seguinos; }
     footer .derechos {
-      grid-area: derechos; }
-    footer .footer__texto {
+      grid-area: derechos;
+      display: grid; }
+    footer .footer__texto-nav {
+      font-size: 30px;
+      color: #4b4848;
+      text-decoration-color: #e4d0d0;
+      display: grid;
       text-align: center; }
-    footer .footer__imagen {
-      width: 300px;
-      padding: 15px;
+    footer .footer__texto {
+      font-size: 25px;
       margin: 10px;
+      display: grid;
+      text-align: center; }
+    footer .footer__texto-derechos {
+      font-size: 25px;
+      color: black; }
+    footer .footer__imagen {
+      /* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
+      width: 400px;
+      padding: 15px;
+      margin: 80px;
       border: #e9a6a6 solid 10px;
-      border-radius: 10px; } }
+      border-radius: 10px; }
+    footer .maps {
+      margin: 80px;
+      height: 400px;
+      width: 400px; }
+    footer h4 {
+      font-size: 40px;
+      display: grid;
+      text-align: center;
+      padding: 40px; } }

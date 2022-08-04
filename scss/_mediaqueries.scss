@@ -188,56 +188,83 @@
         }
     }
     
+/* FOOTER */
+footer {/* foooter grid */
+    background-color: rgba(177, 27, 77, 0.733);
+   /*  background-image: linear-gradient($color-secundario, $color-principal); */ 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "navegacion"
+                         "mapa" 
+                         "info"
+                         "seguinos"
+                         "derechos";
 
-    /* footer*/
-    footer {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "subtituloinfo"
-                            "subtituloseguimos"
-                            "none"
-                            "info"
-                            "redeslogo" 
-                            "derechos";
+                         .navegacion{
+                            grid-area: navegacion;
+                         }
 
-                            .subtituloinfo {
-                                grid-area: subtituloinfo;
-                            }
-                            
-                            .subtituloseguinos {
-                                grid-area: subtituloseguinos;
-                            }
-                            
-                            .info {
-                                grid-area: info;
-                            }
-                            
-                            .redeslogo {
-                                grid-area: redeslogo;
-                            }
-                            
-                            .derechos {
-                                grid-area: derechos;
-                            }
+                         .mapa{
+                            grid-area: mapa;
+                         }
 
-                .footer{
-                    &__imagen{
-                        width: 100px;
-                        padding: 15px;
-                        margin: 10px;
-                        border: $color-principal solid 10px ;
-                        border-radius: 10px;
-                    }
-            
-                    &__texto {
-                        text-align: center;
-                        }
-            
-                }
-    }
-    
+                         .info{
+                            grid-area: info;
+                         }
+
+                         .seguinos{
+                            grid-area: seguinos;
+                         }
+
+                         .derechos{
+                            grid-area: derechos;
+                            display: grid;
+                         }
+
+        .footer{
+            &__texto-nav{
+                font-size: 20px;
+                color: rgb(75, 72, 72);
+                text-decoration-color: rgb(228, 208, 208);
+                display: grid;
+                text-align: center;
+            }
+
+            &__texto {
+                font-size: 15px;
+                margin: 10px;
+                display: grid;
+                text-align: center;
+            }
+
+            &__texto-derechos{
+                font-size: 15px;
+                color: black;
+            }
+
+            &__imagen{/* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
+                width: 200px;
+                padding: 15px;
+                margin: 60px;
+                border: $color-principal solid 10px ;
+                border-radius: 10px;
+            }
+        } 
+        
+        .maps {
+            margin: 60px;
+            height: 200px;
+            width: 200px;
+        }
+
+        h4{
+            display: grid;
+            text-align: center;
+            padding: 30px;
+        }
+   }
 }
-
 
 
 
@@ -410,49 +437,82 @@
         }
     }
 
-    /* footer*/
-        footer {
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-            grid-template-areas: "subtituloinfo"
-                                "subtituloseguimos"
-                                "none"
-                                "info"
-                                "redeslogo" 
-                                "derechos";
 
-                                .subtituloinfo {
-                                    grid-area: subtituloinfo;
-                                }
-                                
-                                .subtituloseguinos {
-                                    grid-area: subtituloseguinos;
-                                }
-                                
-                                .info {
-                                    grid-area: info;
-                                }
-                                
-                                .redeslogo {
-                                    grid-area: redeslogo;
-                                }
-                                
-                                .derechos {
-                                    grid-area: derechos;
-                                }
+    /* FOOTER */
+footer {/* foooter grid */
+    background-color: rgba(177, 27, 77, 0.733);
+   /*  background-image: linear-gradient($color-secundario, $color-principal); */ 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "navegacion"
+                         "mapa" 
+                         "info"
+                         "seguinos"
+                         "derechos";
 
-                    .footer{
-                        &__texto {
-                            text-align: center;
-                        }
+                         .navegacion{
+                            grid-area: navegacion;
+                         }
 
-                        &__imagen{
-                            width: 300px;
-                            padding: 15px;
-                            margin: 10px;
-                            border: $color-principal solid 10px ;
-                            border-radius: 10px;
-                        }
-                    }
+                         .mapa{
+                            grid-area: mapa;
+                         }
+
+                         .info{
+                            grid-area: info;
+                         }
+
+                         .seguinos{
+                            grid-area: seguinos;
+                         }
+
+                         .derechos{
+                            grid-area: derechos;
+                            display: grid;
+                         }
+
+        .footer{
+            &__texto-nav{
+                font-size: 30px;
+                color: rgb(75, 72, 72);
+                text-decoration-color: rgb(228, 208, 208);
+                display: grid;
+                text-align: center;
+            }
+
+            &__texto {
+                font-size: 25px;
+                margin: 10px;
+                display: grid;
+                text-align: center;
+            }
+
+            &__texto-derechos{
+                font-size: 25px;
+                color: black;
+            }
+
+            &__imagen{/* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
+                width: 400px;
+                padding: 15px;
+                margin: 80px;
+                border: $color-principal solid 10px ;
+                border-radius: 10px;
+            }
+        } 
+        
+        .maps {
+            margin: 80px;
+            height: 400px;
+            width: 400px;
         }
+
+        h4{
+            font-size: 40px;
+            display: grid;
+            text-align: center;
+            padding: 40px;
+        }
+    }
 }
