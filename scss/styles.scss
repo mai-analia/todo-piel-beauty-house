@@ -44,12 +44,6 @@ h1{/* titulo de todas las pag todo piel beauty house */
     }
 }
 
-
-/* color boton search */
-.btn {
-    background-color:$color-principal;
-}
-
 /* main y flex */
 .main{
     display: flex;
@@ -92,20 +86,21 @@ main p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    &__turno{/* TIPO DE LETRA, BOX MODEL, borde Y COLOR DE FONDO DE BOTON DE TURNO */
-        font-family: $font-fascinate;
-        text-align: center;
-        padding: 5px 10px;
-        border-radius: 5px;
+.boton__turno{/* TIPO DE LETRA, BOX MODEL, borde Y COLOR DE FONDO DE BOTON DE TURNO */
+    font-family: $font-fascinate;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
 
-        &:hover{/* tranformaciones y transiciones */
-            background-image: radial-gradient(white ,$color-secundario);
-            transform: scale(1.15, 1.15); /* agrandamiento */
-            transition: all 1s;
-        }
+    &:hover{/* tranformaciones y transiciones */
+        background-image: radial-gradient(white ,$color-secundario);
+        transform: scale(1.15, 1.15); /* agrandamiento */
+        transition: all 1s;
     }
 }
+
 
 
 /* COLOR DE FONDO flex Y BOX MODEL DE MAPS E INSTAGRAM */

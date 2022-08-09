@@ -30,7 +30,7 @@ footer {
   footer .footer__texto-nav {
     font-size: 20px;
     color: #4b4848;
-    text-decoration-color: #e4d0d0; }
+    text-decoration-color: rgba(228, 208, 208, 0.678); }
   footer .footer__texto {
     font-size: 15px;
     margin: 10px; }
@@ -51,7 +51,6 @@ h4 {
   font-size: 30px; }
 
 .maps {
-  margin: 30px;
   display: grid;
   justify-content: baseline; }
 
@@ -64,8 +63,6 @@ ul {
   text-decoration-color: aqua;
   color: aqua; }
 
-/* condicional IF */
-/* codigo que se ejecuta */
 /* maps */
 /* EXTEND - extender codigo: clases base que sean iguales */
 .boxmodelyborder-contactanos, .maps__link, .maps__imagenlogo {
@@ -180,10 +177,6 @@ h1 {
       /* agrandamiento */
       transition: all 1s; }
 
-/* color boton search */
-.btn {
-  background-color: #e9a6a6; }
-
 /* main y flex */
 .main {
   display: flex;
@@ -219,18 +212,19 @@ main p {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .button__turno {
-    /* TIPO DE LETRA, BOX MODEL, borde Y COLOR DE FONDO DE BOTON DE TURNO */
-    font-family: "Fascinate";
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 5px; }
-    .button__turno:hover {
-      /* tranformaciones y transiciones */
-      background-image: radial-gradient(white, #e65f75);
-      transform: scale(1.15, 1.15);
-      /* agrandamiento */
-      transition: all 1s; }
+
+.boton__turno {
+  /* TIPO DE LETRA, BOX MODEL, borde Y COLOR DE FONDO DE BOTON DE TURNO */
+  font-family: "Fascinate";
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px; }
+  .boton__turno:hover {
+    /* tranformaciones y transiciones */
+    background-image: radial-gradient(white, #e65f75);
+    transform: scale(1.15, 1.15);
+    /* agrandamiento */
+    transition: all 1s; }
 
 /* COLOR DE FONDO flex Y BOX MODEL DE MAPS E INSTAGRAM */
 .redes {
