@@ -286,12 +286,12 @@ h3 {
 .card__seccion {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto;
   grid-template-areas:
     "uno dos tres"
     "cuatro cinco seis";
   gap: 20px; /* espacio entre las tarjetas */
-  padding: 40px;
+  padding: 20px;
 
   .uno {
     grid-column: 1/2;

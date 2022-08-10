@@ -370,11 +370,11 @@ h3 {
 .card__seccion {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto;
   grid-template-areas: "uno dos tres" "cuatro cinco seis";
   gap: 20px;
   /* espacio entre las tarjetas */
-  padding: 40px; }
+  padding: 20px; }
   .card__seccion .uno {
     grid-column: 1/2;
     grid-row: 1/2; }
@@ -490,7 +490,7 @@ p .card__texto {
   /* quienes somos logos de marcas */
   .img {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas: "lidherma" "idraet" "exel" "carthage" "laca" "zine"; }
     .img .lidherma {
       background-image: url("../resources/lidherma.jpg");
@@ -652,7 +652,7 @@ p .card__texto {
   /* quienes somos logos de marcas */
   .img {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas: "lidherma" "idraet" "exel" "carthage" "laca" "zine"; }
     .img .lidherma {
       background-image: url("../resources/lidherma.jpg");
@@ -726,7 +726,7 @@ p .card__texto {
   /* promos tarjetas */
   .card__seccion {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas: "uno dos" "tres cuatro" "cinco seis"; }
     .card__seccion .uno {
       grid-column: 1/2;

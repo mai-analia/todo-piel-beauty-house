@@ -17,7 +17,7 @@
   /* quienes somos logos de marcas */
   .img {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
       "lidherma"
       "idraet"
@@ -267,7 +267,7 @@
   /* quienes somos logos de marcas */
   .img {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:auto;
     grid-template-areas:
       "lidherma"
       "idraet"
@@ -370,7 +370,7 @@
   /* promos tarjetas */
   .card__seccion {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
       "uno dos"
       "tres cuatro"
