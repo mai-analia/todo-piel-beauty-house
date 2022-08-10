@@ -61,7 +61,8 @@ ul {
 .mail {
   text-decoration: underline;
   text-decoration-color: aqua;
-  color: aqua; }
+  color: black;
+  font-size: 30px; }
 
 /* maps */
 /* EXTEND - extender codigo: clases base que sean iguales */
@@ -490,7 +491,7 @@ p .card__texto {
   .img {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "lidherma"  "idraet" "exel" "carthage" "laca" "zine"; }
+    grid-template-areas: "lidherma" "idraet" "exel" "carthage" "laca" "zine"; }
     .img .lidherma {
       background-image: url("../resources/lidherma.jpg");
       grid-area: lidherma;
@@ -564,7 +565,7 @@ p .card__texto {
   .card__seccion {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "uno" "dos" "tres" "cuatro"  "cinco"  "seis"; }
+    grid-template-areas: "uno" "dos" "tres" "cuatro" "cinco" "seis"; }
     .card__seccion .uno {
       grid-column: 1/2;
       grid-row: 1/2; }
@@ -604,7 +605,7 @@ p .card__texto {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "navegacion" "mapa"  "info" "seguinos" "derechos"; }
+    grid-template-areas: "navegacion" "mapa" "info" "seguinos" "derechos"; }
     footer .navegacion {
       grid-area: navegacion; }
     footer .mapa {
@@ -638,7 +639,7 @@ p .card__texto {
       border: #e9a6a6 solid 10px;
       border-radius: 10px; }
     footer .maps {
-      margin: 60px;
+      margin: 70px;
       height: 200px;
       width: 200px; }
     footer h4 {
@@ -652,7 +653,7 @@ p .card__texto {
   .img {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "lidherma"  "idraet" "exel" "carthage" "laca" "zine"; }
+    grid-template-areas: "lidherma" "idraet" "exel" "carthage" "laca" "zine"; }
     .img .lidherma {
       background-image: url("../resources/lidherma.jpg");
       grid-area: lidherma;
@@ -726,7 +727,7 @@ p .card__texto {
   .card__seccion {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "uno dos" "tres cuatro"  "cinco seis"; }
+    grid-template-areas: "uno dos" "tres cuatro" "cinco seis"; }
     .card__seccion .uno {
       grid-column: 1/2;
       grid-row: 1/2; }
@@ -766,7 +767,7 @@ p .card__texto {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "navegacion" "mapa"  "info" "seguinos" "derechos"; }
+    grid-template-areas: "navegacion" "mapa" "info" "seguinos" "derechos"; }
     footer .navegacion {
       grid-area: navegacion; }
     footer .mapa {

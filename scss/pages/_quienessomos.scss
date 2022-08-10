@@ -1,82 +1,82 @@
 /* fondo de seccion */
 main {
-    background-color: $color-principal
+  background-color: $color-principal;
 }
 
 /* letra, box model, borde fondo de parrafo */
 .somos__texto {
-    font-family: $font-roboto; 
-    font-size: 30px;
-    padding: 20px;
-    margin: 30px;
-    text-align: center;
-    background-color: $color-secundario;
-    list-style: none; /* saca puntos a los items */
-    border: white solid 10px;
-    border-radius: 10px;
+  font-family: $font-roboto;
+  font-size: 30px;
+  padding: 20px;
+  margin: 30px;
+  text-align: center;
+  background-color: $color-secundario;
+  list-style: none; /* saca puntos a los items */
+  border: white solid 10px;
+  border-radius: 10px;
 }
 
- /* tipo de letra fondo color y borde del subtitulo de las marcas */
-.subtitulo__marcas{
-    font-family: $font-fascinate;
-    font-size: 30px;
-    padding: 30px;
-    text-align: center;
-    border: $color-secundario solid 10px;
-    border-radius: 10px;
+/* tipo de letra fondo color y borde del subtitulo de las marcas */
+.subtitulo__marcas {
+  font-family: $font-fascinate;
+  font-size: 30px;
+  padding: 30px;
+  text-align: center;
+  border: $color-secundario solid 10px;
+  border-radius: 10px;
 
-    &:hover{/* tranformaciones y transiciones */
-        transform: scale(1, 1.15); /* zoom */
-        transition: all 2s;
-    }
+  &:hover {
+    /* tranformaciones y transiciones */
+    transform: scale(1, 1.15); /* zoom */
+    transition: all 2s;
+  }
 }
 
+/* grid en galeria */
+.img {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "lidherma idraet exel"
+    "lidherma carthage exel"
+    "laca carthage zine";
 
- /* grid en galeria */
-.img{
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "lidherma idraet exel"
-                         "lidherma carthage exel"
-                         "laca carthage zine";
+  .lidherma {
+    background-image: url("../resources/lidherma.jpg");
+    grid-area: lidherma;
+    @extend .quienessomos-img;
+  }
 
-                         .lidherma {
-                            background-image: url("../resources/lidherma.jpg");
-                            grid-area: lidherma;
-                            @extend .quienessomos-img;
-                        }
-                        
-                        .idraet {
-                            background-image: url("../resources/idraet dermopuriti.png");
-                            grid-area: idraet;
-                            @extend .quienessomos-img;
-                        }
-                        
-                        .exel {
-                            background-image: url("../resources/exel.png");
-                            grid-area: exel;
-                            @extend .quienessomos-img;
-                        }
-                        
-                        .carthage {
-                            background-image: url("../resources/carthage.png");
-                            grid-area: carthage;
-                            @extend .quienessomos-img;
-                        }
-                        
-                        .laca {
-                            background-image: url("../resources/laca.png");
-                            grid-area: laca;
-                            @extend .quienessomos-img;
-                        }
+  .idraet {
+    background-image: url("../resources/idraet dermopuriti.png");
+    grid-area: idraet;
+    @extend .quienessomos-img;
+  }
 
-                        .zine {
-                            background-image: url("../resources/zine.jpg");
-                            grid-area: zine;
-                            @extend .quienessomos-img;
-                        }
-                        
+  .exel {
+    background-image: url("../resources/exel.png");
+    grid-area: exel;
+    @extend .quienessomos-img;
+  }
+
+  .carthage {
+    background-image: url("../resources/carthage.png");
+    grid-area: carthage;
+    @extend .quienessomos-img;
+  }
+
+  .laca {
+    background-image: url("../resources/laca.png");
+    grid-area: laca;
+    @extend .quienessomos-img;
+  }
+
+  .zine {
+    background-image: url("../resources/zine.jpg");
+    grid-area: zine;
+    @extend .quienessomos-img;
+  }
 }

@@ -1,29 +1,29 @@
 /* maps */
 $titulos: (
-    h1: 2.02rem,
-    h2: 1.712rem,
-    h3: 1.875rem,
+  h1: 2.02rem,
+  h2: 1.712rem,
+  h3: 1.875rem,
 );
 
 /* EXTEND - extender codigo: clases base que sean iguales */
 .boxmodelyborder-contactanos {
-    padding: 15px;
-    margin:20px;
-    border: $color-terciario solid 10px;
-    border-radius: 15px;
+  padding: 15px;
+  margin: 20px;
+  border: $color-terciario solid 10px;
+  border-radius: 15px;
 }
 
 .size-img {
-    width: 500px;
-    height: 400px;
+  width: 500px;
+  height: 400px;
 }
 
 .form {
-    padding: 10px;
-    font-size: 25px;
+  padding: 10px;
+  font-size: 25px;
 }
 
 .quienessomos-img {
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
 }

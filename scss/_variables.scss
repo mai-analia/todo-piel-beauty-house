@@ -1,13 +1,12 @@
 /* colores */
 $color-principal: rgb(233, 166, 166); /* ROSA CLARITO */
-$color-secundario: rgb(230, 95, 117);/* ROSA OSCURO */
-$color-terciario:rgb(210, 107, 219); /* ROSA LILA */
+$color-secundario: rgb(230, 95, 117); /* ROSA OSCURO */
+$color-terciario: rgb(210, 107, 219); /* ROSA LILA */
 
 /* font */
-$font-fascinate: 'Fascinate';
-$font-roboto: 'Roboto';
+$font-fascinate: "Fascinate";
+$font-roboto: "Roboto";
 
 /* tamaño letra */
 $contenido: 1rem; /* REM EM = 1REM: 16px */ /* REM  toma de ref la letra M, y EM toma de ref la X. FULL RESPONSIVE */
 $titulo: $contenido * 2;
-

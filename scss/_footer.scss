@@ -1,82 +1,83 @@
-                                     /* FOOTER */
-footer {/* foooter grid */
-    background-color: rgba(177, 27, 77, 0.733);
-   /*  background-image: linear-gradient($color-secundario, $color-principal); */ 
+/* FOOTER */
+footer {
+  /* foooter grid */
+  background-color: rgba(177, 27, 77, 0.733);
+  /*  background-image: linear-gradient($color-secundario, $color-principal); */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "navegacion mapa info seguinos"
+    "derechos derechos derechos derechos";
+
+  .navegacion {
+    grid-area: navegacion;
+  }
+
+  .mapa {
+    grid-area: mapa;
+  }
+
+  .info {
+    grid-area: info;
+  }
+
+  .seguinos {
+    grid-area: seguinos;
+  }
+
+  .derechos {
+    grid-area: derechos;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "navegacion mapa info seguinos"
-                         "derechos derechos derechos derechos";
+  }
 
-                         .navegacion{
-                            grid-area: navegacion;
-                         }
+  .footer {
+    &__texto-nav {
+      font-size: 20px;
+      color: rgb(75, 72, 72);
+      text-decoration-color: rgba(228, 208, 208, 0.678);
+    }
 
-                         .mapa{
-                            grid-area: mapa;
-                         }
+    &__texto {
+      font-size: 15px;
+      margin: 10px;
+    }
 
-                         .info{
-                            grid-area: info;
-                         }
+    &__texto-derechos {
+      font-size: 15px;
+      color: black;
+    }
 
-                         .seguinos{
-                            grid-area: seguinos;
-                         }
-
-                         .derechos{
-                            grid-area: derechos;
-                            display: grid;
-                         }
-
-        .footer{
-            &__texto-nav{
-                font-size: 20px;
-                color: rgb(75, 72, 72);
-                text-decoration-color: rgba(228, 208, 208, 0.678);
-            }
-
-            &__texto {
-                font-size: 15px;
-                margin: 10px;
-            }
-
-            &__texto-derechos{
-                font-size: 15px;
-                color: black;
-            }
-
-            &__imagen{/* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
-                width: 200px;
-                padding: 15px;
-                margin: 10px;
-                border: $color-principal solid 10px ;
-                border-radius: 10px;
-            }
-        }                 
+    &__imagen {
+      /* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
+      width: 200px;
+      padding: 15px;
+      margin: 10px;
+      border: $color-principal solid 10px;
+      border-radius: 10px;
+    }
+  }
 }
 
 h4 {
-    font-family: $font-fascinate;
-    color: white;
-    font-size: 30px;
+  font-family: $font-fascinate;
+  color: white;
+  font-size: 30px;
 }
 
 .maps {
-    display: grid;
-    justify-content: baseline;
-
+  display: grid;
+  justify-content: baseline;
 }
 
-ul{
-    list-style: none;
-    padding: 0px;
+ul {
+  list-style: none;
+  padding: 0px;
 }
 
-.mail{
-    text-decoration: underline;
-    text-decoration-color: aqua;
-    color: aqua;
+.mail {
+  text-decoration: underline;
+  text-decoration-color: aqua;
+  color: black;
+  font-size: 30px;
 }
-
-
