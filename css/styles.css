@@ -635,7 +635,7 @@ p .card__texto {
       /* ANCHO, FONDO COLOR DE MARGEN Y BOX MODEL DE IMAGEN DE REDES  */
       width: 200px;
       padding: 15px;
-      margin: 60px;
+      margin: 70px;
       border: #e9a6a6 solid 10px;
       border-radius: 10px; }
     footer .maps {
@@ -651,50 +651,50 @@ p .card__texto {
 @media (min-width: 576px) and (max-width: 992px) {
   /* quienes somos logos de marcas */
   .img {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "lidherma" "idraet" "exel" "carthage" "laca" "zine"; }
+    grid-template-areas: "lidherma idraet" "exel carthage" "laca zine"; }
     .img .lidherma {
       background-image: url("../resources/lidherma.jpg");
       grid-area: lidherma;
-      grid-column: 1/1;
+      grid-column: 1/2;
       grid-row: auto;
-      background-size: cover;
+      background-size: contain;
       background-position: center; }
     .img .idraet {
       background-image: url("../resources/idraet dermopuriti.png");
       grid-area: idraet;
-      grid-column: 1/1;
+      grid-column: 2/2;
       grid-row: auto;
-      background-size: cover;
+      background-size: contain;
       background-position: center; }
     .img .exel {
       background-image: url("../resources/exel.png");
       grid-area: exel;
-      grid-column: 1/1;
+      grid-column: 1/2;
       grid-row: auto;
-      background-size: cover;
+      background-size: contain;
       background-position: center; }
     .img .carthage {
       background-image: url("../resources/carthage.png");
       grid-area: carthage;
-      grid-column: 1/1;
+      grid-column: 2/2;
       grid-row: auto;
-      background-size: cover;
+      background-size: contain;
       background-position: center; }
     .img .laca {
       background-image: url("../resources/laca.png");
       grid-area: laca;
-      grid-column: 1/1;
+      grid-column: 1/2;
       grid-row: auto;
-      background-size: cover;
+      background-size: contain;
       background-position: center; }
     .img .zine {
       background-image: url("../resources/zine.jpg");
       grid-area: zine;
-      grid-column: 1/1;
+      grid-column: 2/2;
       grid-row: auto;
-      background-size: cover;
+      background-size: contain;
       background-position: center; }
   /* servicios tarjetas */
   .servicios {
